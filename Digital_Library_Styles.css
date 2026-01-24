@@ -9,31 +9,43 @@
     font-family: "Roboto", sans-serif;
 }
 
-li{
+li {
     list-style-type: none;
 }
 
 .Purple{
-    color: 
+    color: #7342d6;
 }
 
-Img{
-    width: 100%;
+.Btn {
+    padding: 12px 24px;
+    font-size: 20px;
+    border-radius: 4px;
+    background-color: #7342d6;
+    color: white;
+    transition: all 300ms ease-in-out;
 }
 
-/*Home Styles*/
+.Btn:hover{
+    cursor: pointer;
+}
 
-.Nav {
+.Btn:active{
+    transform: translateY(4px);
+}
+
+/*Nav Styles*/
+
+Nav  {
     display: flex;
     height: 80px;
 }
 
-.Nav__Div--Container{
-    width: 100%;
-    max-width: 1200px;
+.Nav__Div--Container {
+    padding: 16px;
     display: flex;
+    width: 1200px;
     justify-content: space-between;
-    padding: 4px 16px;
     align-items: center;
 }
 
@@ -42,10 +54,10 @@ Img{
 }
 
 .Nav__Link{
-    margin-left: 16px;
+    margin-left: 20px;
     text-decoration: none;
     font-size: 20px;
-    transition: all 900ms ease;
+    transition: all 300ms ease;
     color: #7342d6;
     font-weight: bold;
 }
@@ -55,29 +67,34 @@ Img{
 }
 
 .Nav__Link--Primary{
-    margin-left: 16px;
+    margin-left: 20px;
     text-decoration: none;
+    padding: 8px 12px;
     font-size: 20px;
-    transition: all 200ms ease-in-out;
-    padding: 8px;
+    transition: all 300ms ease-in-out;
+    border: 2px solid;
+    border-radius: 4px;
     color: #7342d6;
     font-weight: bold;
-    border: 2px solid #7342d6;
-    border-radius: 4px;
 }
 
 .Nav__Link--Primary:hover{
-    font-size: 22px;
-    background-color: rgba(222, 202, 242, 0.9);
+    font-size: 23px;
+    background-color: rgba(151, 110, 193, 0.3);
 }
 
-.Logo {
-    max-width: 160px;
-    width: 100%;
+.Logo{
+    width: 160px;
 }
+
+.Logo:hover{
+    cursor: pointer;
+}
+
+/*Home Styles*/
 
 #Home{
-    background-color: rgba(115,66,214,0.1);
+    background-color: rgba(207, 189, 224, 0.3)
 }
 
 Header{
@@ -87,13 +104,29 @@ Header{
 .Home__Div--Outer{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 720px;
     height: 100%;
     justify-content: space-between;
-    margin: 0 auto;
+    align-items: center;
+}
 
+.Home__Img{
+    height: 100%;
+    max-height: 50vh;
 }
 
 .Home__Div--Inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Home--Title{
+    text-align: center;
+    margin: 4px 12px 8px 12px;
+}
+
+.Home--Subtitle{
+    text-align: center;
+    margin: 12px;
+    font-size: 20px;
 }
