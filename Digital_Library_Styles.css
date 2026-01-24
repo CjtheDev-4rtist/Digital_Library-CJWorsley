@@ -13,6 +13,14 @@ li{
     list-style-type: none;
 }
 
+.Purple{
+    color: 
+}
+
+Img{
+    width: 100%;
+}
+
 /*Home Styles*/
 
 .Nav {
@@ -38,6 +46,8 @@ li{
     text-decoration: none;
     font-size: 20px;
     transition: all 900ms ease;
+    color: #7342d6;
+    font-weight: bold;
 }
 
 .Nav__Link:hover{
@@ -50,15 +60,40 @@ li{
     font-size: 20px;
     transition: all 200ms ease-in-out;
     padding: 8px;
-    border: 2px solid black;
+    color: #7342d6;
+    font-weight: bold;
+    border: 2px solid #7342d6;
     border-radius: 4px;
 }
 
 .Nav__Link--Primary:hover{
     font-size: 22px;
+    background-color: rgba(222, 202, 242, 0.9);
 }
 
 .Logo {
     max-width: 160px;
     width: 100%;
+}
+
+#Home{
+    background-color: rgba(115,66,214,0.1);
+}
+
+Header{
+    height: calc(100vh - 80px);
+}
+
+.Home__Div--Outer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 720px;
+    height: 100%;
+    justify-content: space-between;
+    margin: 0 auto;
+
+}
+
+.Home__Div--Inner{
 }
