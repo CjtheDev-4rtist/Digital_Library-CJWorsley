@@ -15,6 +15,7 @@ li {
 
 .Purple{
     color: #7342d6;
+    font-style: normal;
 }
 
 .Btn {
@@ -33,6 +34,7 @@ li {
 .Btn:active{
     transform: translateY(4px);
 }
+
 
 /*Nav Styles*/
 
@@ -109,6 +111,10 @@ Header{
     align-items: center;
 }
 
+.Home__Img--Mask{
+    z-index: 2;
+}
+
 .Home__Img{
     height: 100%;
     max-height: 50vh;
@@ -128,5 +134,52 @@ Header{
 .Home--Subtitle{
     text-align: center;
     margin: 12px;
+    font-size: 24px;
+    font-style: italic;
+}
+
+/*Highlights Styles*/
+
+.Highlight__Div--Outer{
+    display: flex;
+    padding: 56px 0;
+}
+
+.Highlight__Div--Inner{
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.Highlight__Wrapper{
+    display: flex;
+}
+
+.Highlight{
+    display: flex;
+    padding: 0 24px;
+    width: calc(100% / 3);
+}
+
+.Highlight__Img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 32px;
+}
+
+.Highlight__Icon{
+    border: 2px solid;
+    padding: 24px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    color:#7342d6;
     font-size: 20px;
 }
+
