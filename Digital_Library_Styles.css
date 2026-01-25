@@ -35,12 +35,18 @@ li {
     transform: translateY(4px);
 }
 
+Body{
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
 
 /*Nav Styles*/
 
 Nav  {
     display: flex;
     height: 80px;
+    justify-content: center;
 }
 
 .Nav__Div--Container {
@@ -136,13 +142,44 @@ Header{
     margin: 12px;
     font-size: 24px;
     font-style: italic;
+    padding-bottom: 12px;
 }
 
 /*Highlights Styles*/
 
+#Highlights{
+    position: relative;
+    max-width: 100vw;
+}
+
+#Highlights:before,
+#Highlights:after {
+    background: url("assets/wave.svg");
+    content: "";
+    position: absolute;
+    width: 101vw;
+    height: 12vw;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#Highlights:before{
+    transform: translateY(-100%);
+    top: 1px;
+}
+
+#Highlights:after{
+    transform: translateY(100%) rotate(180deg);
+    bottom: 1px;
+}
+
 .Highlight__Div--Outer{
     display: flex;
     padding: 56px 0;
+    justify-content: center;
 }
 
 .Highlight__Div--Inner{
@@ -153,7 +190,6 @@ Header{
     justify-content: center;
     align-items: center;
 }
-
 
 
 .Highlight__Wrapper{
@@ -182,4 +218,131 @@ Header{
     color:#7342d6;
     font-size: 20px;
 }
+
+/*Books*/
+
+#Books{
+    background-color: rgba(207, 189, 224, 0.3);
+    height: 100vh;
+}
+
+.Books__Title{
+    padding-top: 24px;
+    z-index: 2;
+}
+
+.Books__Div--Outer{
+    display: flex;
+    padding: 56px 0;
+    height: 100%;
+    justify-content: center;
+}
+
+.Books__Div--Inner{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Books__Wrapper{
+    display: flex;
+}
+
+.Book{
+    width: 25%;
+    padding: 24px;
+    text-align: left;
+}
+
+.Book__Img{
+    max-height: 300px;
+}
+
+.Book__Mask{
+    margin-bottom: 8px;
+    border-radius: 4px;
+    overflow-x: hidden;
+}
+
+.Book__Rating{
+    text-align: left;
+}
+
+.Book__Pricing{
+    text-align: left;
+}
+
+.Book__Rating{
+    color: rgb(242, 180, 8);
+}
+
+.Book__Price--Normal{
+    text-decoration: line-through;
+    color: grey;
+    margin-right: 8px;
+}
+
+/*Explore*/
+
+.Explore__Div--Outer{
+    display: flex;
+    padding: 56px 0;
+    justify-content: center;
+}
+
+.Explore__Div--Inner{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/*About*/
+
+.About__Div--Outer{
+    display: flex;
+    padding: 56px 0;
+    justify-content: center;
+}
+
+.About__Div--Inner{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/*Contact*/
+
+.Contact__Div--Outer{
+    display: flex;
+    padding: 56px 0;
+    justify-content: center;
+}
+
+.Contact__Div--Inner{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/*Footer Styles*/
 
