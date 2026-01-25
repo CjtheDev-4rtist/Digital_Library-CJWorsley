@@ -226,11 +226,6 @@ Header{
     height: 100vh;
 }
 
-.Books__Title{
-    padding-top: 24px;
-    z-index: 2;
-}
-
 .Books__Div--Outer{
     display: flex;
     padding: 56px 0;
@@ -246,45 +241,59 @@ Header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
+
+.Books__Section--Title{
+    padding-top: 48px;
+}
+
 
 .Books__Wrapper{
     display: flex;
 }
 
 .Book{
-    width: 25%;
-    padding: 24px;
-    text-align: left;
+    margin: 32px 24px 0px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: opacity 400ms ease;
+}
+
+.Book:hover{
+    .Book__Img{
+        opacity: 80%;
+        cursor: pointer;
+    }
+}
+
+.Book__Img--Container {
+    height: 50vh;
+    width: calc(100% / 1);
 }
 
 .Book__Img{
-    max-height: 300px;
+    height: 100%;
+    width: 100%;
 }
 
-.Book__Mask{
-    margin-bottom: 8px;
-    border-radius: 4px;
-    overflow-x: hidden;
-}
-
-.Book__Rating{
-    text-align: left;
-}
-
-.Book__Pricing{
-    text-align: left;
+.Book__Text{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 8px;
 }
 
 .Book__Rating{
-    color: rgb(242, 180, 8);
+    display: flex;
+    justify-content: start;
+    text-align: left;
+    color: rgb(248, 190, 2);
 }
 
 .Book__Price--Normal{
     text-decoration: line-through;
-    color: grey;
-    margin-right: 8px;
+    color: darkgrey;
 }
 
 /*Explore*/
