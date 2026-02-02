@@ -299,24 +299,7 @@ Header{
 
 /*Explore*/
 
-#Explore{
-    height: 100vh;
-}
 
-.Explore__Div--Container{
-    display: flex;
-    flex-direction: column;
-}
-
-.Explore__Books{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.Explore__Book{
-    display: flex;
-    flex-direction: column;
-}
 
 /*About*/
 
