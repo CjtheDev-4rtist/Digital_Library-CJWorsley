@@ -253,28 +253,29 @@ Header{
 }
 
 .Book{
-    margin: 32px 24px 0px 24px;
+    width: 25%;
+    margin: 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     transition: opacity 400ms ease;
 }
 
-.Book:hover{
-    .Book__Img{
-        opacity: 80%;
-        cursor: pointer;
-    }
+.Book__Img--Container:hover .Book__Img{
+    transform: scale(1.03);
+    cursor: not-allowed; 
 }
 
 .Book__Img--Container {
     height: 50vh;
     width: calc(100% / 1);
+    display: flex;
 }
 
 .Book__Img{
     height: 100%;
     width: 100%;
+    transition: all 300ms ease;
 }
 
 .Book__Text{
@@ -298,24 +299,31 @@ Header{
 
 /*Explore*/
 
-.Explore__Div--Outer{
-    display: flex;
-    padding: 56px 0;
-    justify-content: center;
+#Explore{
+    height: 100vh;
 }
 
-.Explore__Div--Inner{
+.Explore__Div--Container{
     display: flex;
-    width: 100%;
-    max-width: 1200px;
-    height: 100%;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+}
 
+.Explore__Books{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Explore__Book{
+    display: flex;
+    flex-direction: column;
 }
 
 /*About*/
+
+#About{
+    background-color: rgba(207, 189, 224, 0.3);
+    height: 100vh;
+}
 
 .About__Div--Outer{
     display: flex;
