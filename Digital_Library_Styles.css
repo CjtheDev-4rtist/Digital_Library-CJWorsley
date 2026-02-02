@@ -1,6 +1,7 @@
 /*General Styles*/
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
 
 *{
     padding: 0;
@@ -79,6 +80,7 @@ Nav  {
     text-decoration: none;
     padding: 8px 12px;
     font-size: 20px;
+    font-family: "Delius", cursive;
     transition: all 300ms ease-in-out;
     border: 2px solid;
     border-radius: 4px;
@@ -102,17 +104,20 @@ Nav  {
 /*Home Styles*/
 
 #Home{
-    background-color: rgba(207, 189, 224, 0.3)
+    background-color: rgba(207, 189, 224, 0.3);
+    width: 100vw;
 }
 
 Header{
     height: calc(100vh - 80px);
+    width: 100vw;
 }
 
 .Home__Div--Outer{
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
 }
@@ -130,11 +135,13 @@ Header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100vw;
 }
 
 .Home--Title{
     text-align: center;
-    margin: 4px 12px 8px 12px;
+    font-size: 62px;
+    margin: 30px 12px 4px 12px;
 }
 
 .Home--Subtitle{
@@ -142,6 +149,7 @@ Header{
     margin: 12px;
     font-size: 24px;
     font-style: italic;
+    font-family: "Delius", cursive;
     padding-bottom: 12px;
 }
 
