@@ -299,7 +299,57 @@ Header{
 
 /*Explore*/
 
+.Explore__Div--Container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 24px 58px;
+}
 
+.Explore__Section-Title{
+    margin-bottom: 24px;
+}
+
+.Explore__Book--Wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Explore__Book{
+    display: flex;
+    flex-direction: column;
+    margin: 12px 32px;
+}
+
+.Explore__Img--Mask{
+    height: 45vh;
+    width: 15vw;
+
+}
+.Explore__Img{
+    height: 100%;
+    width: 100%;
+}
+
+.Explore__Text{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 12px 0;
+}
+
+.Explore__Icon{
+    display: flex;
+    text-align: left;
+    color:rgb(248, 190, 2);
+}
+
+.Explore__Price--Normal{
+    text-decoration: line-through;
+    color: darkgrey;
+}
 
 /*About*/
 
