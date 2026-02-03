@@ -34,6 +34,7 @@ li {
 
 .Btn:hover{
     cursor: pointer;
+    opacity: 90%;
 }
 
 .Btn:active{
@@ -320,60 +321,40 @@ Header{
 
 /*Explore*/
 
+#Explore{
+    height: 100vh;
+    width: 100vw;
+}
+
 .Explore__Div--Container{
     display: flex;
     flex-direction: column;
+    margin: 24px 56px;
     align-items: center;
-    justify-content: center;
-    margin: 24px 58px;
-}
-
-.Explore__Section-Title{
-    margin-bottom: 24px;
 }
 
 .Explore__Book--Wrapper{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .Explore__Book{
     display: flex;
     flex-direction: column;
-    margin: 12px 32px;
+    margin: 12px 24px;
 }
 
 .Explore__Img--Mask{
-    height: 45vh;
-    width: 15vw;
-
+    display: flex;
+    height: 30%;
+    width: 
 }
+
 .Explore__Img{
     height: 100%;
     width: 100%;
-}
-
-.Explore__Text{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    margin: 12px 0;
-}
-
-.Explore__Icon{
-    display: flex;
-    text-align: left;
-    color:rgb(248, 190, 2);
-}
-
-.Explore__Price--Normal{
-    text-decoration: line-through;
-    color: darkgrey;
-}
-
-.Explore__Section-Title{
-    font-family: "DM Serif Text", sans-serif;
 }
 
 /*About*/
@@ -381,23 +362,30 @@ Header{
 #About{
     background-color: rgba(207, 189, 224, 0.3);
     height: 100vh;
+    width: 100vw;
 }
 
-.About__Div--Outer{
+.About__Div--Container{
     display: flex;
-    padding: 56px 0;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center; 
     justify-content: center;
 }
 
-.About__Div--Inner{
+.About__Div--Top{
     display: flex;
+    height: 50vh;
     width: 100%;
     max-width: 1200px;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+}
 
+.About__Div--Bottom{
+    display: flex;
+    height: 50vh;
+    width: 100%;
+    max-width: 1200px;
 }
 
 /*Contact*/
