@@ -170,11 +170,11 @@ Header{
 }
 
 .Highlights:before{
-    
+    content: "";
 }
 
 .Highlights:after{
-    
+    content:"";
 }
 
 .Highlights__Div--Outer{
@@ -299,6 +299,73 @@ Header{
 
 /*Explore Styles*/
 
+#Explore{
+    height: 150vh;
+    width: 100vw;
+}
+
+.Explore__Div--Container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Explore__Books--Wrapper{
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Explore__Book{
+    height: 100%;
+    max-height: 40%;
+    width: 100%;
+    max-width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 12px 30px;
+}
+
+.Explore__Img--Mask{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.Explore__Img{
+    height: 100%;
+    width: 100%;
+}
+
+.Explore--Text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Explore--Book-Title{
+    padding-top: 4px;
+}
+
+.Explore--Icon-Decoration{
+    display: flex;
+}
+
+.Explore--Discount{
+    text-decoration: line-through;
+    color: darkgrey;
+    padding-right: 12px;
+}
 
 /*About Styles*/
 
