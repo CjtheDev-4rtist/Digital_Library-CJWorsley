@@ -44,13 +44,14 @@ a{
 Nav{
     display: flex;
     height: 80px;
-    background-color: #242424;
+    width: 100vw;
+    background-color:rgb(242, 234, 246);
     justify-content: center;
 }
 
 .Nav__Div--Container{
     display: flex;
-    width: 100vw;
+    width: 100%;
     max-width: 1200px;
     justify-content: space-between;
     margin: 0px 24px;
@@ -70,7 +71,7 @@ Nav{
 .Nav__Link{
     margin-left: 16px;
     font-size: 20px;
-    color: #fff;
+    color: rgb(0,0,0);
     transition: all 300ms ease-in-out;
 }
 
@@ -80,12 +81,11 @@ Nav{
 
 .Nav__Link--Primary{
     margin-left: 12px;
-    font-size: 20px;
+    font-size: 21px;
     padding: 8px 18px;
-    font-family: "Dehlia", cursive;
-    color: #242424;
-    background-color: #fff;
-    border: none;
+    font-family: "Deluis", cursive;
+    color: rgb(97, 18, 194);
+    border: 2px solid rgb(97, 18, 194);
     border-radius: 4px;
     transition: all 300ms ease;
 }
@@ -101,6 +101,7 @@ Nav{
 
 Header{
     height: calc(100vh - 80px);
+    width: 100vw;
     background-color: rgb(242, 234, 246)
 }
 
@@ -113,15 +114,17 @@ Header{
 
 .Home--Title{
     text-align: center;
-    font-size: 56px;
+    font-size: 50px;
     font-family: "DM Serif Display", serif;
+    line-height: 1;
     margin-top: 18px;
     
 }
 
 .Home--Subtitle{
-    font-family: "Imperial Script", cursive;
-    font-size: 40px;
+    font-family: "Roboto";
+    font-size: 20px;
+    margin-top: 12px;
 }
 
 .Btn{
@@ -130,9 +133,12 @@ Header{
     border: none;
     border-radius: 4px;
     margin: 12px;
-    font-size: 18px;
-    font-family: "Delius", cursive;
+    font-size: 16px;
     transition: all 300ms ease;
+}
+
+.Btn__Link{
+    font-family: "Roboto", sans-serif;
 }
 
 .Btn__Link:hover{
@@ -226,7 +232,7 @@ Header{
 #Books{
     height: 100vh;
     width: 100vw;
-    background-color:rgb(242, 234, 246);
+    background-color:rgb(0, 0, 0);
 }
 
 .Books__Div--Container{
@@ -235,6 +241,13 @@ Header{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.Section--Design{
+    color: #fff;
+    font-family: "DM Serif Display";
+    padding-top: 58px;
+    font-size: 32px;
 }
 
 .Books--Wrapper{
@@ -285,6 +298,7 @@ Header{
 
 .Book--Title{
     padding-top: 12px;
+    color: #fff;
 }
 
 .Book--Discount{
@@ -292,9 +306,6 @@ Header{
     color: darkgrey;
     padding-right: 8px;
 }
-
-
-
 
 
 /*Explore Styles*/
@@ -369,7 +380,15 @@ Header{
 
 /*About Styles*/
 
+#About{
+    height: 100vh;
+    width: 100vw;
+}
 
+.About__Div--Container{
+    display: flex;
+    flex-direction: column;
+}
 
 /*Contact Styles*/
 
