@@ -1,9 +1,9 @@
-/*General Styles*/
+/*Universal Styles*/
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Glass+Antiqua&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Playwrite+US+Modern:wght@100..400&display=swap');
 
 
 *{
@@ -13,54 +13,42 @@
     font-family: "Roboto", sans-serif;
 }
 
-li {
+li{
     list-style-type: none;
 }
 
+a{
+    text-decoration: none;
+}
+
 .Purple{
-    color: #7342d6;
-    font-style: normal;
+    color:rgb(97, 18, 194);
+    font-weight: bold;
+    padding-left: 4px;
 }
 
-.Btn {
-    padding: 8px 18px;
-    font-size: 20px;
-    border-radius: 4px;
-    background-color: #7342d6;
-    color: white;
-    margin-bottom: 12px;
-    transition: all 300ms ease-in-out;
-}
+/*Home Styles: Navigation*/
 
-.Btn:hover{
-    cursor: pointer;
-    opacity: 90%;
-}
-
-.Btn:active{
-    transform: translateY(4px);
-}
-
-Body{
-    max-width: 100vw;
-    overflow-x: hidden;
-}
-
-
-/*Nav Styles*/
-
-Nav  {
+Nav{
     display: flex;
     height: 80px;
+    background-color: #242424;
     justify-content: center;
 }
 
-.Nav__Div--Container {
-    padding: 16px;
+.Nav__Div--Container{
     display: flex;
-    width: 1200px;
+    width: 100vw;
+    max-width: 1200px;
     justify-content: space-between;
+    margin: 0px 24px;
+    padding: 12px;
     align-items: center;
+}
+
+.Logo{
+    max-width: 180px;
+    color-scheme: white;
 }
 
 .Nav__List{
@@ -68,12 +56,10 @@ Nav  {
 }
 
 .Nav__Link{
-    margin-left: 20px;
-    text-decoration: none;
+    margin-left: 12px;
     font-size: 20px;
-    transition: all 300ms ease;
-    color: #7342d6;
-    font-weight: bold;
+    color: #fff;
+    transition: all 300ms ease-in-out;
 }
 
 .Nav__Link:hover{
@@ -81,331 +67,85 @@ Nav  {
 }
 
 .Nav__Link--Primary{
-    margin-left: 20px;
-    text-decoration: none;
-    padding: 8px 12px;
+    margin-left: 12px;
     font-size: 20px;
-    font-family: "Delius", cursive;
-    transition: all 300ms ease-in-out;
-    border: 2px solid;
+    padding: 8px 14px;
+    font-family: "Dehlia", cursive;
+    color: #242424;
+    background-color: #fff;
+    border: none;
     border-radius: 4px;
-    color: #7342d6;
-    font-weight: bold;
+    transition: all 300ms ease;
 }
 
 .Nav__Link--Primary:hover{
-    font-size: 23px;
-    background-color: #7342d6;
-    color: white;
+    background-color:rgb(97, 18, 194);
+    color: #fff;
 }
 
-.Logo{
-    width: 160px;
-}
 
-.Logo:hover{
-    cursor: pointer;
-}
 
-/*Home Styles*/
-
-#Home{
-    background-color: rgba(207, 189, 224, 0.3);
-    width: 100vw;
-}
+/*Home Styles: General*/
 
 Header{
     height: calc(100vh - 80px);
-    width: 100vw;
+    background-color: rgb(242, 234, 246)
 }
 
-.Home__Div--Outer{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.Home__Img--Mask{
-    z-index: 2;
-}
-
-.Home__Img{
-    height: 100%;
-    max-height: 50vh;
-}
-
-.Home__Div--Inner{
+.Home__Div--Container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
+    justify-content: center;
 }
 
 .Home--Title{
     text-align: center;
-    font-size: 62px;
-    font-weight: 500px;
-    font-family: "DM Serif Text", sans-serif;
-    margin: 30px 12px 4px 4px;
+    font-size: 56px;
+    font-family: "DM Serif Display", serif;
+    margin-top: 18px;
+    
 }
 
 .Home--Subtitle{
-    text-align: center;
-    margin: 12px;
-    font-size: 38px;
-    font-family: "Glass Antiqua", cursive;
-    padding-bottom: 4px;
+    font-family: "Imperial Script", cursive;
+    font-size: 40px;
 }
 
-/*Highlights Styles*/
-
-#Highlights{
-    position: relative;
-    max-width: 100vw;
-}
-
-#Highlights:before,
-#Highlights:after {
-    background: url("assets/wave.svg");
-    content: "";
-    position: absolute;
-    width: 101vw;
-    height: 12vw;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#Highlights:before{
-    transform: translateY(-100%);
-    top: 1px;
-}
-
-#Highlights:after{
-    transform: translateY(100%) rotate(180deg);
-    bottom: 1px;
-}
-
-.Highlight__Div--Outer{
-    display: flex;
-    padding: 56px 0;
-    justify-content: center;
-}
-
-.Highlight__Div--Inner{
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.Higlight__Title{
-    text-align: center;
-    padding-right: 24px;
-    font-family: "DM Serif Text", sans-serif;
-}
-
-
-.Highlight__Wrapper{
-    display: flex;
-}
-
-.Highlight{
-    display: flex;
-    padding: 0 24px;
-    width: calc(100% / 3);
-}
-
-.Highlight__Img{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding-top: 32px;
-}
-
-.Highlight__Icon{
-    border: 2px solid;
-    padding: 24px;
+.Btn{
+    padding: 8px 18px;
+    background-color:rgb(97, 18, 194);
+    border: none;
     border-radius: 4px;
-    margin-bottom: 16px;
-    color:#7342d6;
-    font-size: 20px;
-}
-
-/*Books*/
-
-#Books{
-    background-color: rgba(207, 189, 224, 0.3);
-    height: 100vh;
-}
-
-.Books__Div--Outer{
-    display: flex;
-    padding: 56px 0;
-    height: 100%;
-    justify-content: center;
-}
-
-.Books__Div--Inner{
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.Books__Section--Title{
-    font-family: "DM Serif Text", sans-serif;
-    padding-top: 48px;
-}
-
-
-.Books__Wrapper{
-    display: flex;
-}
-
-.Book{
-    width: 25%;
-    margin: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: opacity 400ms ease;
-}
-
-.Book__Img--Container:hover .Book__Img{
-    transform: scale(1.03);
-    cursor: not-allowed; 
-}
-
-.Book__Img--Container {
-    height: 50vh;
-    width: calc(100% / 1);
-    display: flex;
-}
-
-.Book__Img{
-    height: 100%;
-    width: 100%;
+    margin: 12px;
+    font-size: 18px;
+    font-family: "Delius", cursive;
     transition: all 300ms ease;
 }
 
-.Book__Text{
+.Btn:hover{
+    cursor: pointer;
+}
+
+.Btn:active{
+    transform: translateY(2px)
+}
+
+.Btn__Link{
+    color: white;
+}
+
+.Home__Img--Mask{
+    height: 100%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: left;
-    margin-top: 8px;
-}
-
-.Book__Rating{
-    display: flex;
-    justify-content: start;
-    text-align: left;
-    color: rgb(248, 190, 2);
-}
-
-.Book__Price--Normal{
-    text-decoration: line-through;
-    color: darkgrey;
-}
-
-/*Explore*/
-
-#Explore{
-    height: 100vh;
-    width: 100vw;
-}
-
-.Explore__Div--Container{
-    display: flex;
-    flex-direction: column;
-    margin: 24px 56px;
-    align-items: center;
-}
-
-.Explore__Book--Wrapper{
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    max-width: 500px;
+    padding-right: 24px;
+    max-height: 500px;
 }
 
-.Explore__Book{
-    display: flex;
-    flex-direction: column;
-    margin: 12px 24px;
-}
-
-.Explore__Img--Mask{
-    display: flex;
-    height: 30%;
-    width: 
-}
-
-.Explore__Img{
+.Home__Img{
     height: 100%;
     width: 100%;
 }
-
-/*About*/
-
-#About{
-    background-color: rgba(207, 189, 224, 0.3);
-    height: 100vh;
-    width: 100vw;
-}
-
-.About__Div--Container{
-    display: flex;
-    height: 100%;
-    width: 100%;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-}
-
-.About__Div--Top{
-    display: flex;
-    height: 50vh;
-    width: 100%;
-    max-width: 1200px;
-}
-
-.About__Div--Bottom{
-    display: flex;
-    height: 50vh;
-    width: 100%;
-    max-width: 1200px;
-}
-
-/*Contact*/
-
-.Contact__Div--Outer{
-    display: flex;
-    padding: 56px 0;
-    justify-content: center;
-}
-
-.Contact__Div--Inner{
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-
-/*Footer Styles*/
-
