@@ -27,9 +27,12 @@ a{
 
 .Purple{
     color:rgb(97, 18, 194);
-    font-weight: bold;
-    font-family: "Roboto", sans-serif;
-    margin-bottom: 12px;
+}
+
+.Purple--Decor{
+    color:rgb(97, 18, 194);
+    font-family: "DM Serif Display", serif;
+    font-size: 30px;
 }
 
 .Section--Display{
@@ -304,9 +307,21 @@ Header{
 .Book--Discount{
     text-decoration: line-through;
     color: darkgrey;
+    opacity: 80%;
     padding-right: 8px;
 }
 
+.Book--Price{
+    color: #bfbfbf;
+}
+
+.Star__Rating{
+    display: flex;
+    color: rgb(247, 202, 2);
+    width: 31%;
+    justify-content: center;
+    padding: 4px;
+}
 
 /*Explore Styles*/
 
@@ -383,11 +398,41 @@ Header{
 #About{
     height: 100vh;
     width: 100vw;
+    background-color: rgb(242, 234, 246);
 }
 
 .About__Div--Container{
     display: flex;
     flex-direction: column;
+}
+
+.About__Div--Top{
+    display: flex;
+    height: 50%;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 56px;
+}
+
+.About__Img--Mask{
+    height: 100%;
+    max-height: 40%;
+    width: 100%;
+    max-width: 40%;
+}
+
+.About__Img {
+    height: 100%;
+    width: 100%;
+}
+
+.About--Top-Text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
 }
 
 /*Contact Styles*/
