@@ -34,8 +34,9 @@ a{
 
 .Section--Display{
     text-align: center;
-    margin-top: 20px;
+    margin-top: 50px;
     font-family: "DM Serif Display", serif;
+    font-size: 24px;
 }
 
 /*Home Styles: Navigation*/
@@ -67,7 +68,7 @@ Nav{
 }
 
 .Nav__Link{
-    margin-left: 12px;
+    margin-left: 16px;
     font-size: 20px;
     color: #fff;
     transition: all 300ms ease-in-out;
@@ -80,7 +81,7 @@ Nav{
 .Nav__Link--Primary{
     margin-left: 12px;
     font-size: 20px;
-    padding: 8px 14px;
+    padding: 8px 18px;
     font-family: "Dehlia", cursive;
     color: #242424;
     background-color: #fff;
@@ -168,6 +169,14 @@ Header{
     width: 100vw;
 }
 
+.Highlights:before{
+    
+}
+
+.Highlights:after{
+    
+}
+
 .Highlights__Div--Outer{
     display: flex;
     height: 100%;
@@ -192,11 +201,12 @@ Header{
 
 .Icon--Decoration{
     display: flex;
-    padding: 24px;
+    padding: 22px;
+    color:rgb(97, 18, 194);
     border: 2px solid #242424;
     border-radius: 4px;
     font-size: 32px;
-    margin-top: 12px;
+    margin-top: 42px;
 }
 
 .Highlight--Text{
@@ -207,9 +217,83 @@ Header{
     text-align: center;
 }
 
-.T
+.Highlight--Caption{
+    font-size: 22px;
+}
 
 /*Books Styles*/
+
+#Books{
+    height: 100vh;
+    width: 100vw;
+    background-color:rgb(242, 234, 246);
+}
+
+.Books__Div--Container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Books--Wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.Book{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    max-width: calc(100% / 4);
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 12px;
+}
+
+.Book__Img--Mask{
+    display: flex;
+    height: 100%;
+    max-height: 60vh;
+    width: 100%;
+}
+
+.Book__Img--Mask:hover{
+    cursor: pointer
+}
+
+.Book__Img{
+    height: 98%;
+    width: 98%;
+    transition: all 300ms ease-in-out;
+}
+
+.Book__Img--Mask:hover .Book__Img{
+    height: 100%;
+    width: 100%;
+}
+
+.Book--Text{
+    display: flex;
+    flex-direction: column;
+}
+
+.Book--Title{
+    padding-top: 12px;
+}
+
+.Book--Discount{
+    text-decoration: line-through;
+    color: darkgrey;
+    padding-right: 8px;
+}
+
+
 
 
 
