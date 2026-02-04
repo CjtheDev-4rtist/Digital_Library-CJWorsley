@@ -339,7 +339,6 @@ Header{
     height: 150vh;
     width: 100vw;
     background-color:rgb(0,0,0);
-    
 }
 
 .Explore__Div--Container{
@@ -432,36 +431,61 @@ Header{
 
 .About__Div--Top{
     display: flex;
-    height: 45%;
+    height: 40%;
     width: 100%;
-    max-width: 1200px;
+    max-width: 60vw;
     align-items: center;
+    justify-content: space-between;
+}
+
+.About--Top-Text{
+    display: flex; 
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 .About__TopImg--Mask{
     height: 100%;
-    max-height: 30vh;
+    max-height: 40vh;
     width: 100%;
-    max-width: 15vw;
+    max-width: 20vw;
 }
 
 .About__Img--Top{
     height: 100%;
     width: 100%;
+    padding-right: 40px;
 }
 
-.About--Top-Text{
+
+.About__Div--Bottom{
+    display: flex;
+    height: 40%;
+    width: 100%;
+    max-width: 60vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.About--Bottom-Text{
     display: flex;
     flex-direction: column;
+    height: 45%;
     width: 100%;
+    padding-left: 40px;
+
 }
 
 .About__BotImg--Mask{
     height: 100%;
-    max-height: 30vh;
+    max-height: 40vh;
     width: 100%;
-    max-width: 35vw;
+    max-width: 30vw;
+    padding-bottom: 20px;
 }
 
 .About__Img--Bottom{
@@ -469,25 +493,23 @@ Header{
     width: 100%;
 }
 
-.About__Div--Bottom{
-    display: flex;
-}
 
 .About--Header{
     text-align: center;
+    padding-top: 32px;
     font-size: 50px;
     font-family: "DM Serif Display", serif;
     line-height: 1;
-    margin-top: 18px;
 }
 
-.About--Bottom-Text{
-    display: flex;
-    flex-direction: column;
-}
-
-.Introduction{
+.About--Top-Intro{
     font-family: "DM Serif Display", serif;
+    padding-top: 20px;
+}
+
+.About--Bottom-Intro{
+    font-family: "DM Serif Display", serif;
+    padding-top: 10px;
 }
 
 .Section--Decor{
