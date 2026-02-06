@@ -60,6 +60,15 @@ a{
     margin-top: 18px;
 }
 
+.Purple--Decor-Spec{
+    color:rgb(97, 18, 194);
+    text-align: center;
+    font-size: 48px;
+    font-family: "DM Serif Display", serif;
+    line-height: 1;
+    margin-top: 18px;
+}
+
 /*Home Styles: Navigation*/
 
 Nav{
@@ -380,9 +389,16 @@ Header{
     width: 100%;
 }
 
-.Explore__Img{
+.Explore__Img--Mask:hover .Explore__Img{
     height: 100%;
     width: 100%;
+    cursor: not-allowed;
+}
+
+.Explore__Img{
+    height: 90%;
+    width: 90%;
+    transition: all 300ms ease-in-out;
 }
 
 .Explore--Text{
@@ -504,6 +520,11 @@ Header{
     line-height: 1;
 }
 
+.About--SubHeader{
+    font-size: 42px;
+    font-family: "Delius", cursive;
+}
+
 .About--Top-Intro{
     font-family: "DM Serif Display", serif;
     padding-top: 20px;
@@ -573,6 +594,7 @@ Header{
     padding-top: 34px;
     font-size: 32px;
     font-family: "Roboto";
+    text-align: center;
 }
 
 .Contact--Title{
