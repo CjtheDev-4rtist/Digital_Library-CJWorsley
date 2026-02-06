@@ -523,23 +523,46 @@ Header{
     width: 100vw;
 }
 
-.Contact__Div--Container{
+.Contact__Div--Outer{
+    display: flex;
     height: 100%;
     width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.Contact__Div--Inner{
     display: flex;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 160px;
+}
+
+.Contact__Div--FormContainer{
+    display: flex;
+    height: 100%;
+    width: 50%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.Contact--Content{
+.Contact__Div--TextContainer{
     display: flex;
-    color: rgb(0, 0, 0);
+    height: 100%;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-.Contact__Header{
-    color: rgb(0, 0, 0);
-}
+.
 
 /*Footer Styles*/
 
