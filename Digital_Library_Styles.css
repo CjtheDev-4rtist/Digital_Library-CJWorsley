@@ -533,6 +533,7 @@ Header{
 .About--Bottom-Intro{
     font-family: "DM Serif Display", serif;
     padding-top: 10px;
+    text-align: center
 }
 
 .Section--Decor{
@@ -592,8 +593,14 @@ Header{
 
 .Contact__Header{
     padding-top: 34px;
-    font-size: 32px;
+    font-size: 40px;
     font-family: "Roboto";
+    text-align: center;
+}
+
+.Contact__SubHeader{
+    font-size: 28px;
+    font-family: "DM Serif Display";
     text-align: center;
 }
 
