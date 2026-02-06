@@ -47,6 +47,8 @@ a{
 
 .Purple--Decor-Med{
     color:rgb(97, 18, 194);
+    font-size: 32px;
+    padding-top: 14px;
 }
 
 .Purple--Decor-Big{
@@ -104,9 +106,9 @@ Nav{
     padding: 8px 18px;
     font-family: "Deluis", cursive;
     color: rgb(97, 18, 194);
-    border: 2px solid rgb(97, 18, 194);
+    border: 2px solid #242424;
     border-radius: 4px;
-    transition: all 300ms ease;
+    transition: all 300ms ease-in;
 }
 
 .Nav__Link--Primary:hover{
@@ -545,24 +547,42 @@ Header{
 
 .Contact__Div--FormContainer{
     display: flex;
-    height: 100%;
-    width: 50%;
+    height: 80%;
+    width: 30%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: 2px solid rgba(97, 18, 194,90%);
+    border-radius: 10px;
 }
 
 .Contact__Div--TextContainer{
     display: flex;
-    height: 100%;
-    width: 50%;
+    height: 80%;
+    width: 60%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    border: 2px solid rgba(97, 18, 194,90%);
+    border-radius: 10px;
+    margin-left: 24px;
 }
 
-.
+.Contact__Header{
+    padding-top: 34px;
+    font-size: 32px;
+    font-family: "Roboto";
+}
+
+.Contact--Title{
+    padding-top: 12px;
+}
+
+.Form__Header{
+    padding-bottom: 12px;
+}
+
 
 /*Footer Styles*/
 
@@ -581,6 +601,10 @@ Footer{
     justify-content: center;
     align-items: center;
     margin: 0 160px;
+}
+
+.Contact__Div--IconContainer{
+    display: flex;
 }
 
 
