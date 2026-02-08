@@ -13,6 +13,10 @@
     font-family: "Roboto", sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 Body{
     overflow-x: hidden;
 }
@@ -33,10 +37,11 @@ a{
 }
 
 .Section--Design{
-    color: #fff;
+    color: #242424;
     font-family: "DM Serif Display";
-    padding-top: 58px;
+    padding-top: 140px;
     font-size: 32px;
+    padding-bottom: 20px;
 }
 
 .Purple--Decor{
@@ -115,7 +120,7 @@ Nav{
     padding: 8px 18px;
     font-family: "Deluis", cursive;
     color: rgb(97, 18, 194);
-    border: 2px solid #242424;
+    border: 2px solid rgb(97, 18, 194);
     border-radius: 4px;
     transition: all 300ms ease-in;
 }
@@ -191,6 +196,7 @@ Header{
     max-width: 500px;
     padding-right: 24px;
     max-height: 380px;
+    z-index: 2;
 }
 
 .Home__Img{
@@ -203,26 +209,44 @@ Header{
 #Highlights{
     height: 50vh;
     width: 100vw;
+    position: relative;
 }
 
-.Highlights:before{
+.Highlight:before, .Highlight:after{
     content: "";
+    background: url("assets/wave.svg");
+    width: 101vw;
+    height: 12vw;
+    position: absolute;
+    left: 0px;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.Highlights:after{
-    content:"";
+.Highlight:before{
+    transform: translateY(-100%);
+    top: 1px;
 }
 
-.Highlights__Div--Outer{
+.Highlight:after{
+    transform: translateY(100%) rotate(180deg);
+    bottom: 1px;
+}
+
+.Highlights__Div--Container{
     display: flex;
+    flex-direction: column;
     height: 100%;
     width: 100%;
-    max-width: 1200px;
     align-items: center;
 }
 
 .Highlights--Wrapper{
     display: flex;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
     align-items: center;
     justify-content: center;
 }
@@ -262,7 +286,7 @@ Header{
 #Books{
     height: 100vh;
     width: 100vw;
-    background-color:rgb(0, 0, 0);
+    background-color: rgb(242, 234, 246);
 }
 
 .Books__Div--Container{
@@ -321,19 +345,20 @@ Header{
 }
 
 .Book--Title{
-    padding-top: 12px;
-    color: #fff;
+    padding-top: 4px;
+    color: #242424;
+    font-size: 18px;
 }
 
 .Book--Discount{
     text-decoration: line-through;
-    color: darkgrey;
+    color: rgb(82, 81, 81);
     opacity: 80%;
     padding-right: 8px;
 }
 
 .Book--Price{
-    color: #bfbfbf;
+    color: #242424;
 }
 
 .Star__Rating{
@@ -349,7 +374,14 @@ Header{
 #Explore{
     height: 150vh;
     width: 100vw;
-    background-color:rgb(0,0,0);
+    background-color: rgb(21, 21, 21);
+}
+
+.Explore--Header{
+    font-size: 32px;
+    font-family: "DM Serif Display", serif;
+    padding-top: 32px;
+    color: #fff;
 }
 
 .Explore__Div--Container{
@@ -618,7 +650,7 @@ Header{
 Footer{
     height: 180px;
     width: 100vw;
-    background-color: rgb(0,0,0);
+    background-color: rgb(36, 35, 35);
 }
 
 .Footer--Container{
@@ -652,14 +684,24 @@ Footer{
 .Footer__Img{
     height: 100%;
     width: 100%;
+    filter: grayscale(1) invert(1);
 }
 
 .Footer__Link{
-    color: #fff;
+    color: #bfbfbf;
     padding-left: 12px;
     transition: all 300ms ease;
 }
 
 .Footer__Link:hover{
     text-decoration: underline;
+}
+
+.Footer__Copyright{
+    display: flex;
+}
+
+.Footer__Para{
+    color: #bfbfbf;
+    padding-top: 8px;
 }
