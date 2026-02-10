@@ -1,16 +1,14 @@
+/*-----------------*/
 /*Universal Styles*/
+/*-----------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Delius&family=Playwrite+US+Modern:wght@100..400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=TASA+Orbiter:wght@400..800&display=swap');
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    font-family: "Tasa Orbiter", sans-serif;
 }
 
 html{
@@ -27,32 +25,31 @@ li{
 
 a{
     text-decoration: none;
+    transition: all 300ms ease;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.Purple{
+    color: rgb(97, 18, 194);
+}
+
+Body{
+    overflow-x: hidden;
 }
 
 
-.Purple--Decor{
-    color:rgb(97, 18, 194);
-    font-family: "DM Serif Display", serif;
-    font-size: 28px;
-}
-
-.Purple--Decor-Big{
-    color:rgb(97, 18, 194);
-    text-align: center;
-    font-size: 50px;
-    font-family: "DM Serif Display", serif;
-    line-height: 1;
-    margin-top: 18px;
-}
-
-
+/*-----------------*/
 /*Home Styles: Navigation*/
+/*-----------------*/
 
 Nav{
     display: flex;
     height: 80px;
     width: 100vw;
-    background-color:rgb(242, 234, 246);
+    background-color: rgb(242, 234, 246);
     justify-content: center;
 }
 
@@ -76,8 +73,8 @@ Nav{
 }
 
 .Nav__Link{
-    margin-left: 16px;
-    font-size: 20px;
+    margin-left: 32px;
+    font-size: 22px;
     color: rgb(0,0,0);
     transition: all 300ms ease-in-out;
 }
@@ -87,10 +84,10 @@ Nav{
 }
 
 .Nav__Link--Primary{
-    margin-left: 12px;
-    font-size: 21px;
+    margin-left: 32px;
+    font-size: 22px;
     padding: 8px 18px;
-    font-family: "Deluis", cursive;
+    font-family: "Tasa Orbiter", serif;
     color: rgb(97, 18, 194);
     border: 2px solid rgb(97, 18, 194);
     border-radius: 4px;
@@ -100,11 +97,13 @@ Nav{
 .Nav__Link--Primary:hover{
     background-color:rgb(97, 18, 194);
     color: #fff;
+    text-decoration: none;
 }
 
 
-
+/*-----------------*/
 /*Home Styles: General*/
+/*-----------------*/
 
 Header{
     height: calc(100vh - 80px);
@@ -112,37 +111,79 @@ Header{
     background-color: rgb(242, 234, 246)
 }
 
-.Home__Div--Container{
+.Home__Div--Holder{
     display: flex;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Home__Div--TextContainer{
+    display: flex;
+    height: 100%;
+    width: 50%;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
 }
 
-.Home--Title{
-    text-align: center;
-    font-size: 50px;
-    font-family: "DM Serif Display", serif;
-    line-height: 1;
-    margin-top: 18px;
-    
+.Home__Div--ImgContainer{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+
 }
 
-.Home--Subtitle{
-    font-family: "Roboto";
-    font-size: 20px;
-    margin-top: 12px;
+.Home_Div--BtnHolder{
+    display: flex;
+}
+
+.Home__Img--Mask{
+    height: 100%;
+    width: 100%;
+}
+
+.Home__Img{
+    height: 100%;
+    width: 100%;
+}
+
+
+.Home__Header{
+    font-size: 60px;
+    font-weight: 900;
+    text-align: left;
+    padding-left: 12px;
+    
+
+}
+
+.Home__Subheader{
+    font-size: 26px;
+    font-weight: 100;
+    text-align: left;
+    padding-left: 12px;
+}
+
+.Purple--Decor{
+    color: rgb(97, 18, 194);
+    font-size: 30px;
 }
 
 .Btn{
-    padding: 8px 18px;
-    background-color:rgb(97, 18, 194);
-    border: none;
+    font-size: 24px;
+    font-weight: 300;
+    padding: 8px 12px;
+    margin: 20px 12px;
+    background-color: rgb(97, 18, 194);
+    color: #fff;
     border-radius: 4px;
-    margin: 12px;
-    font-size: 16px;
-    font-weight: bold;
-    transition: all 300ms ease;
+}
+
+.Btn:hover{
+    cursor: pointer;
 }
 
 .Btn__Link{
@@ -155,6 +196,7 @@ Header{
     text-align: center;
     border: none;
     color: rgb(97, 18, 194);
+    display: none;
 }
 
 .Menu__Backdrop{
@@ -168,6 +210,19 @@ Header{
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 300ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.Menu--Open .Menu__Backdrop{
+    visibility: visible;
+    opacity: 1
+}
+
+.Menu--Open{
+    max-height: 100vh;
+    overflow-y: hidden;
 }
 
 .Menu__Links{
@@ -183,6 +238,11 @@ Header{
 .Menu__Link{
     color: #fff;
     font-size: 24px;
+    transition: all 300ms ease;
+}
+
+.Menu__Link:hover{
+    text-decoration: underline;
 }
 
 .Btn__Menu--Closed{
@@ -221,7 +281,9 @@ Header{
     width: 100%;
 }
 
+/*-----------------*/
 /*Highlights Styles*/
+/*-----------------*/
 
 #Highlights{
     height: 50vh;
@@ -229,10 +291,57 @@ Header{
     position: relative;
 }
 
+.Highlight__Div--Container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+
+.Highlight--Wrapper{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+.Highlight{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: calc(100% / 3);
+    margin-right: 30px;
+    margin-top: 20px;
+}
+
+.Highlight__Header{
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.Icon--Decor{
+    border: 2px solid;
+    display: flex;
+    max-width: 80px;
+    justify-content: center;
+    border-radius: 4px;
+    padding: 20px 20px;
+    font-size: 24px;
+    margin: 0 auto;
+}
+
+.Highlight--Title{
+    padding-top: 15px;
+}
+
 .Highlight:before, .Highlight:after{
     content: "";
     background: url("assets/wave.svg");
-    width: 101vw;
+    width: 100vw;
     height: 12vw;
     position: absolute;
     left: 0px;
@@ -251,59 +360,11 @@ Header{
     bottom: 1px;
 }
 
-.Highlights__Div--Container{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    align-items: center;
-}
 
-.Highlights--Wrapper{
-    display: flex;
-    height: 100%;
-    width: 100%;
-    max-width: 1200px;
-    align-items: center;
-    justify-content: center;
-}
 
-.Highlight{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: calc(100% / 3);
-    align-items: center;
-}
-
-.Icon--Decoration{
-    display: flex;
-    padding: 22px;
-    color:rgb(97, 18, 194);
-    border: 3px solid rgba(56, 2, 123, 0.3);
-    border-radius: 4px;
-    font-size: 32px;
-    margin-top: 42px;
-}
-
-.Highlight--Text{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 12px;
-    text-align: center;
-}
-
-.Highlight--Caption{
-    font-size: 22px;
-}
-
-.Highlight__Header{
-    font-size: 28px;
-    padding-top: 60px;
-}
-
+/*-----------------*/
 /*Books Styles*/
+/*-----------------*/
 
 #Books{
     height: 100vh;
@@ -312,129 +373,114 @@ Header{
 }
 
 .Books__Div--Container{
-    height: 100%;
-    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-
-.Books--Wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100%;
     width: 100%;
     max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    
+}
+
+.Books--Wrapper{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
 }
 
 .Book{
     display: flex;
-    height: 100%;
-    width: 100%;
-    max-width: calc(100% / 4);
     flex-direction: column;
-    justify-content: center;
-    margin: 0 12px;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 30vw;
+    max-height: 60vh;
+    padding-top: 40px;
+    text-align: center;
+    margin-left: 12px;
 }
 
-.Book__Img--Mask{
+.Books__Img--Mask{
     display: flex;
     height: 100%;
-    max-height: 60vh;
     width: 100%;
 }
 
-.Book__Img--Mask:hover{
-    cursor: pointer
+.Books__Img--Mask:hover .Books__Img{
+    height: 100%;
+    width: 100%;
 }
 
-.Book__Img{
+.Books__Img{
     height: 98%;
     width: 98%;
-    transition: all 300ms ease-in-out;
+    transition: all 300ms ease;
 }
 
-.Book__Img--Mask:hover .Book__Img{
-    height: 100%;
-    width: 100%;
-}
-
-.Book--Text{
+.Book--Rating{
     display: flex;
-    flex-direction: column;
+    color: rgb(244, 185, 8);
+    padding-top: 4px;
 }
 
 .Book--Title{
-    padding-top: 4px;
-    color: #242424;
     font-size: 18px;
+    font-weight: 300;
+    padding-top: 4px;
 }
 
 .Book--Discount{
     text-decoration: line-through;
-    color: rgb(82, 81, 81);
-    opacity: 80%;
-    padding-right: 8px;
+    color: darkgrey;
 }
 
-.Book--Price{
-    color: #242424;
+.Books__Header{
+    z-index: 2;
+    font-size: 30px;
+    padding-top: 150px
 }
 
-.Star__Rating{
-    display: flex;
-    color: rgb(247, 202, 2);
-    width: 31%;
-    justify-content: center;
-    padding: 4px;
-}
 
+/*-----------------*/
 /*Explore Styles*/
+/*-----------------*/
 
 #Explore{
-    height: 150vh;
+    height: 100vh;
     width: 100vw;
     background-color: rgb(21, 21, 21);
 }
 
-.Explore--Header{
-    font-size: 32px;
-    font-family: "DM Serif Display", serif;
-    padding-top: 32px;
-    color: #fff;
-}
 
 .Explore__Div--Container{
-    height: 100%;
-    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.Explore__Books--Wrapper{
     height: 100%;
     width: 100%;
     max-width: 1200px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin: 0 auto;
     align-items: center;
 }
 
-.Explore__Book{
+.Explore--Wrapper{
+    display: flex;
+    flex-wrap: wrap;
     height: 100%;
-    max-height: 40%;
     width: 100%;
-    max-width: 20%;
+}
+
+.Explore--Book{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 12px 30px;
+    margin: 0 auto;
+    height: 100%;
+    max-height: 30vh;
+    width: 100%;
+    max-width: 15vw;
+    margin-left: 40px;
 }
 
 .Explore__Img--Mask{
@@ -446,45 +492,37 @@ Header{
 .Explore__Img--Mask:hover .Explore__Img{
     height: 100%;
     width: 100%;
-    cursor: not-allowed;
 }
 
 .Explore__Img{
-    height: 90%;
-    width: 90%;
-    transition: all 300ms ease-in-out;
+    height: 95%;
+    width: 95%;
+    transition: all 300ms ease;
 }
 
-.Explore--Text{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.Explore--Book-Title{
-    padding-top: 12px;
+.Explore__Header{
+    margin-top: 40px;
     color: #fff;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 
-.Explore--Icon-Decoration{
-    display: flex;
-    padding-top: 8px;
-    color: rgb(247, 202, 2);
-}
-
-.Explore--Discount{
-    text-decoration: line-through;
-    color: darkgrey;
-    opacity: 80%;
-    padding-right: 12px;
+.Explore--Title{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    padding-top: 4px;
 }
 
 .Explore--Price{
-    color: #bfbfbf;
+    color: #fff;
+    padding-top: 4px;
+    font-size: 14px;
 }
 
+/*-----------------*/
 /*About Styles*/
+/*-----------------*/
 
 #About{
     height: 100vh;
@@ -492,182 +530,22 @@ Header{
     background-color: rgb(242, 234, 246);
 }
 
-.About__Div--Container{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.About__Div--Top{
-    display: flex;
-    height: 40%;
-    width: 100%;
-    max-width: 60vw;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.About--Top-Text{
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-}
-
-.About__TopImg--Mask{
-    height: 100%;
-    max-height: 40vh;
-    width: 100%;
-    max-width: 20vw;
-}
-
-.About__Img--Top{
-    height: 100%;
-    width: 100%;
-    padding-right: 40px;
-}
 
 
-.About__Div--Bottom{
-    display: flex;
-    height: 40%;
-    width: 100%;
-    max-width: 60vw;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.About--Bottom-Text{
-    display: flex;
-    flex-direction: column;
-    height: 45%;
-    width: 100%;
-    padding-left: 40px;
-
-}
-
-.About__BotImg--Mask{
-    height: 100%;
-    max-height: 40vh;
-    width: 100%;
-    max-width: 30vw;
-    padding-bottom: 20px;
-}
-
-.About__Img--Bottom{
-    height: 100%;
-    width: 100%;
-}
-
-
-.About--Header{
-    text-align: center;
-    padding-top: 32px;
-    font-size: 50px;
-    font-family: "DM Serif Display", serif;
-    line-height: 1;
-}
-
-.About--SubHeader{
-    font-size: 42px;
-    font-family: "Delius", cursive;
-}
-
-.About--Top-Intro{
-    font-family: "DM Serif Display", serif;
-    padding-top: 20px;
-}
-
-.About--Bottom-Intro{
-    font-family: "DM Serif Display", serif;
-    padding-top: 10px;
-    text-align: center
-}
-
-.Section--Decor{
-    font-family: "DM Serif Display", serif;
-}
-
+/*-----------------*/
 /*Contact Styles*/
+/*-----------------*/
 
 #Contact{
     height: calc(100vh - 180px);
     width: 100vw;
 }
 
-.Contact__Div--Outer{
-    display: flex;
-    height: 100%;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
-}
 
-.Contact__Div--Inner{
-    display: flex;
-    height: 100%;
-    width: 100%;
-    max-width: 1200px;
-    align-items: center;
-    justify-content: center;
-    margin: 0px 160px;
-}
-
-.Contact__Div--FormContainer{
-    display: flex;
-    height: 80%;
-    width: 30%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid rgba(97, 18, 194,90%);
-    border-radius: 10px;
-}
-
-.Contact__Div--TextContainer{
-    display: flex;
-    height: 80%;
-    width: 60%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border: 2px solid rgba(97, 18, 194,90%);
-    border-radius: 10px;
-    margin-left: 24px;
-}
-
-.Contact__Header{
-    padding-top: 34px;
-    font-size: 40px;
-    font-family: "Roboto";
-    text-align: center;
-}
-
-.Contact__SubHeader{
-    font-size: 28px;
-    font-family: "DM Serif Display";
-    text-align: center;
-}
-
-.Contact--Title{
-    padding-top: 12px;
-}
-
-.Form__Header{
-    padding-bottom: 12px;
-}
-
-
+/*-----------------*/
 /*Footer Styles*/
+/*-----------------*/
+
 
 Footer{
     height: 180px;
@@ -675,55 +553,35 @@ Footer{
     background-color: rgb(36, 35, 35);
 }
 
-.Footer--Container{
-    height: 100%;
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 160px;
+
+/*Tablets*/
+
+@media (max-width: 768px){
+    .Home--Title{
+        padding: 0 24px;
+        font-size: 40px;
+    }
+
+    .Home--Subtitle{
+        font-size: 20px;
+    }
+
+    .Btn{
+        font-size: 18px;
+    }
+
+    .Book{
+        width: 50%;
+    }
 }
 
-.Contact__Div--IconContainer{
-    display: flex;
-}
+/*Small & Large Phones*/
+@media (max-width: 550px) {
+    .Nav__List{
+        display: none;
+    }
 
-
-.Footer__List{
-    display: flex;
-}
-
-.Footer__Img--Mask{
-    display: flex;
-    height: 100%;
-    width: 100%;
-    max-height: 60px;
-    max-width: 160px;
-}
-
-.Footer__Img{
-    height: 100%;
-    width: 100%;
-    filter: grayscale(1) invert(1);
-}
-
-.Footer__Link{
-    color: #bfbfbf;
-    padding-left: 12px;
-    transition: all 300ms ease;
-}
-
-.Footer__Link:hover{
-    text-decoration: underline;
-}
-
-.Footer__Copyright{
-    display: flex;
-}
-
-.Footer__Para{
-    color: #bfbfbf;
-    padding-top: 8px;
+    .Btn__Menu{
+        display: block;
+    }
 }
