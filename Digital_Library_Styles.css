@@ -530,6 +530,17 @@ Header{
     background-color: rgb(242, 234, 246);
 }
 
+.About__Div--Container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 
 /*-----------------*/
