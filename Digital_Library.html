@@ -1,307 +1,362 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UFT-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <html>
+        
+        <head>
+            <meta charset="UFT-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Library</title>
-        <link rel="stylesheet" href="Digital_Library_Styles.css">
-        <script src="https://kit.fontawesome.com/ab3cd619a5.js" crossorigin="anonymous"></script>
-        <script src="Index.js"></script>
-    </head>
+            <title>E-Library</title>
+            <link rel="stylesheet" href="Digital_Library_Styles.css">
+            <script src="https://kit.fontawesome.com/ab3cd619a5.js" crossorigin="anonymous"></script>
+        </head>
 
-    <body>
-
-        <section id="Home">
-            <nav>
-                <div class="Nav__Div--Container">
-                    <img class="Logo" src="assets/Library.svg">
-
-                    <ul class="Nav__List">
-                        <li><a class="Nav__Link" href="#Home">Home</a></li>
-                        <li><a class="Nav__Link" href="#About">About</a></li>
-                        <li><a class="Nav__Link" href="#Contact">Contact</a></li>
-                        <li><a class="Nav__Link--Primary" href="#Books">Books</a></li>
-                    </ul>
-                    <button class="Btn__Menu" onclick="openMenu()">
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
-
-                    <div class="Menu__Backdrop">
-                        <button class="Btn__Menu Btn__Menu--Closed" onclick="closeMenu()"> 
-                            <i class="fa-regular fa-circle-xmark"></i>
-                        </button>
-                        <ul class="Menu__Links">
-                            <li class="Menu__List"><a class="Menu__Link" href="#Home" onclick="closeMenu()">Home</a></li>
-                            <li class="Menu__List"><a class="Menu__Link" href="#About" onclick="closeMenu()">About</a></li>
-                            <li class="Menu__List"><a class="Menu__Link" href="#Contact" onclick="closeMenu()">Contact</a></li>
-                            <li class="Menu__List"><a class="Menu__Link" href="#Books" onclick="closeMenu()">Books</a></li>
+        <body>
+            <section id="Home">
+                <nav>
+                    <div class="Nav__Div--Container">
+                        <img class="Logo" src="assets/Library.svg">
+                        <ul class="Nav__List">
+                            <li><a class="Nav__Link" href="#Home">Home</a></li>
+                            <li><a class="Nav__Link" href="#About">About</a></li>
+                            <li><a class="Nav__Link" href="#Contact">Contact</a></li>
+                            <li><a class="Nav__Link--Primary" href="#Books">Books</a></li>
                         </ul>
                     </div>
-                </div>
-            </nav>
+                </nav>
 
-            <header>
-                <div class="Home__Div--Holder">
-                    <div class="Home__Div--TextContainer">
-                        <h2 class="Home__Header">America's Finest Digital Collection of Literary Material</h2>
-                        <h3 class="Home__Subheader">Find the book for you with <span class="Purple--Decor">Library</span></h3>
-                        <div class="Home__Div--BtnHolder">
-                            <a href="#Books"><button class="Btn">Search Books</button></a>
-                        </div>
+                <header>
+                    <div class="Home__Div--Container">
+                        <h1 class="Home--Title">America's Finest Digital Collection of Literary Material</h1>
+                        <h2 class="Home--Subtitle">Dive into your dream book with <span class="Purple"> Library.</span></h2>
+                        <a href="#Books"><button class="Btn">Browse Books</button></a>
                     </div>
+                    <figure class="Home__Img--Mask">
+                        <img class="Home__Img" src="assets/Undraw_Books.svg">
+                    </figure>
+                </header>
+            </section>
 
-                    <div class="Home__Div--ImgContainer">
-                        <figure class="Home__Img--Mask">
-                            <img class="Home__Img" src="assets/Undraw_Books.svg">
-                        </figure>
-                    </div>
-                </div>
-            </header>
-        </section>
-
-        <main>
-            <section id="Highlights">
-                <div class="Highlight__Div--Container">
-                    <h2 class="Highlight__Header">Why choose <span class="Purple"> Library?</span></h2>
-                    <div class="Highlight--Wrapper">
-
-                        <div class="Highlight">
-                            <div class="Icon--Decor">
-                                <i class="fa-solid fa-bolt"></i>
+            <main>
+                <section id="Highlights">
+                    <div class="Highlight__Div--Container">
+                        <h2 class="Highlight__Header">Why choose <span class="Purple"> Library?</span></h2>
+                        <div class="Highlights--Wrapper">
+                            <div class="Highlight">
+                                <div class="Icon--Decor">
+                                    <i class="fa-solid fa-bolt"></i>
+                                </div>
+                                <div class="Highlight--Text">
+                                    <h3 class="Highlight--Caption">Easy and Quick</h3>
+                                    <p class="Highlight--Subcaption">Get instant access to the books you purchase</p>
+                                </div>
                             </div>
-                            <h2 class="Highlight--Title">Easy and Quick</h2>
-                            <p class="Highlight--Subtitle">Get instant access to the books you purchase</p>
-                        </div>
 
-                         <div class="Highlight">
-                            <div class="Icon--Decor">
-                                <i class="fa-solid fa-dollar-sign"></i>
+                            <div class="Highlight">
+                                <div class="Icon--Decor">
+                                    <i class="fa-solid fa-bolt"></i>
+                                </div>
+                                <div class="Highlight--Text">
+                                    <h3 class="Highlight--Caption">Best Value</h3>
+                                    <p class="Highlight--Subcaption">Practical services priced affordably</p>
+                                </div>
                             </div>
-                            <h2 class="Highlight--Title">Best Value</h2>
-                            <p class="Highlight--Subtitle">Get instant access to the books you purchase</p>
-                        </div>
 
-                         <div class="Highlight">
-                            <div class="Icon--Decor">
-                                <i class="fa-solid fa-book"></i>
+
+                            <div class="Highlight">
+                                <div class="Icon--Decor">
+                                    <i class="fa-solid fa-book"></i>
+                                </div>
+                                <div class="Highlight--Text">
+                                    <h3 class="Highlight--Caption">10,000+ Books</h3>
+                                    <p class="Highlight--Subcaption">Get instant access to the books you purchase</p>
+                                </div>
                             </div>
-                            <h2 class="Highlight--Title">10,000+ Books</h2>
-                            <p class="Highlight--Subtitle">Get instant access to the books you purchase</p>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section id="Books">
-                <div class="Books__Div--Container">
-                    <h2 class="Books__Header">Revisit Timeless <span class="Purple"> Titles</span></h2>
-                    <div class="Books--Wrapper">
-                        <div class="Book">
-                            <figure class="Books__Img--Mask">
-                                <img class="Books__Img" src="assets/atomic habits.jpg">
-                            </figure>
-                            <h2 class="Book--Title">Atomic Habits</h2>
-                            <div class="Book--Rating">
+                <section id="Books">
+                    <div class="Books__Div--Container">
+                        <h2 class="Books__Header">Featured <span class="Purple"> Volumes</span></h2>
+                        <div class="Books__Wrapper">
+
+                            <div class="Book">
+
+                                <figure class="Book__Img--Mask">
+                                    <img class="Book__Img" src="assets/atomic habits.jpg">
+                                </figure>
+
+                                <h3 class="Book--Title">Atomic Habits</h3>
+                                <div class="Book--Rating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star-half-stroke"></i>
                                 </div>
-                                <p class="Book--Price"><span class="Book--Discount">$176.48</span> $76.48</p>
-                        </div>
+                                <p class="Book--Price"><span class="Book--Discount">$75.89</span> $45.89</p>
+                            </div>
 
-                        <div class="Book">
-                            <figure class="Books__Img--Mask">
-                                <img class="Books__Img" src="assets/david goggins.jpeg">
-                            </figure>
-                            <h2 class="Book--Title">Can't Hurt Me</h2>
-                            <div class="Book--Rating">
+                            <div class="Book">
+
+                                <figure class="Book__Img--Mask">
+                                    <img class="Book__Img" src="assets/david goggins.jpeg">
+                                </figure>
+
+                                <h3 class="Book--Title">Can't Hurt Me</h3>
+                                <div class="Book--Rating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star-half-stroke"></i>
                                 </div>
-                                <p class="Book--Price"><span class="Book--Discount">$176.48</span> $76.48</p>
-                        </div>
+                                <p class="Book--Price"><span class="Book--Discount">$75.89</span> $45.89</p>
+                            </div>
 
-                        <div class="Book">
-                            <figure class="Books__Img--Mask">
-                                <img class="Books__Img" src="assets/crack the coding interview.png">
-                            </figure>
-                            <h2 class="Book--Title">Crack The Coding Interview</h2>
-                            <div class="Book--Rating">
+
+                            <div class="Book">
+
+                                <figure class="Book__Img--Mask">
+                                    <img class="Book__Img" src="assets/crack the coding interview.png">
+                                </figure>
+
+                                <h3 class="Book--Title">Crack the Coding Interview</h3>
+                                <div class="Book--Rating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star-half-stroke"></i>
                                 </div>
-                                <p class="Book--Price"><span class="Book--Discount">$176.48</span> $76.48</p>
-                        </div>
+                                <p class="Book--Price"><span class="Book--Discount">$75.89</span> $45.89</p>
+                            </div>
 
-                        <div class="Book">
-                            <figure class="Books__Img--Mask">
-                                <img class="Books__Img" src="assets/deep work.jpeg">
-                            </figure>
-                            <h2 class="Book--Title">Deep Work</h2>
-                            <div class="Book--Rating">
+                            <div class="Book">
+
+                                <figure class="Book__Img--Mask">
+                                    <img class="Book__Img" src="assets/deep work.jpeg">
+                                </figure>
+
+                                <h3 class="Book--Title">Deep Work</h3>
+                                <div class="Book--Rating">
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star-half-stroke"></i>
                                 </div>
-                                <p class="Book--Price"><span class="Book--Discount">$176.48</span> $76.48</p>
-                        </div>
-            </section>
-
-            <section id="Explore">
-                <div class="Explore__Div--Container">
-                    <h2 class="Explore__Header">Revisit Timeless <span class="Purple"> Titles</span></h2>
-                    <div class="Explore--Wrapper">
-                        <div class="Explore--Book">
-                            <figure class="Explore__Img--Mask">
-                                <img class="Explore__Img" src="assets/book-1.jpeg">
-                            </figure>
-                            <h2 class="Explore--Title">Cashflow Quadrant</h2>
-                            <div class="Book--Rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star-half-stroke"></i>
-                                </div>
-                                <p class="Explore--Price"><span class="Book--Discount">$176.48</span> $76.48</p>
-                        </div>
-
-                        <div class="Explore--Book">
-                            <figure class="Explore__Img--Mask">
-                                <img class="Explore__Img" src="assets/book-2.jpeg">
-                            </figure>
-                            <h2 class="Explore--Title">Cashflow Quadrant</h2>
-                            <div class="Book--Rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star-half-stroke"></i>
-                                </div>
-                                <p class="Explore--Price"><span class="Book--Discount">$176.48</span> $76.48</p>
-                        </div>
-
-                        <div class="Explore--Book">
-                            <figure class="Explore__Img--Mask">
-                                <img class="Explore__Img" src="assets/book-3.jpeg">
-                            </figure>
-                            <h2 class="Explore--Title">Cashflow Quadrant</h2>
-                            <div class="Book--Rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star-half-stroke"></i>
-                                </div>
-                                <p class="Explore--Price"><span class="Book--Discount">$176.48</span> $76.48</p>
-                        </div>
-
-                        <div class="Explore--Book">
-                            <figure class="Explore__Img--Mask">
-                                <img class="Explore__Img" src="assets/book-4.jpeg">
-                            </figure>
-                            <h2 class="Explore--Title">Cashflow Quadrant</h2>
-                            <div class="Book--Rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star-half-stroke"></i>
-                                </div>
-                                <p class="Explore--Price"><span class="Book--Discount">$176.48</span> $76.48</p>
-                        </div>
-
-                        <div class="Explore--Book">
-                            <figure class="Explore__Img--Mask">
-                                <img class="Explore__Img" src="assets/book-5.jpeg">
-                            </figure>
-                            <h2 class="Explore--Title">Cashflow Quadrant</h2>
-                            <div class="Book--Rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star-half-stroke"></i>
-                                </div>
-                                <p class="Explore--Price"><span class="Book--Discount">$176.48</span> $76.48</p>
-                        </div>
-
-                        <div class="Explore--Book">
-                            <figure class="Explore__Img--Mask">
-                                <img class="Explore__Img" src="assets/book-6.jpeg">
-                            </figure>
-                            <h2 class="Explore--Title">Cashflow Quadrant</h2>
-                            <div class="Book--Rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star-half-stroke"></i>
-                                </div>
-                                <p class="Explore--Price"><span class="Book--Discount">$176.48</span> $76.48</p>
-                        </div>
-
-                        <div class="Explore--Book">
-                            <figure class="Explore__Img--Mask">
-                                <img class="Explore__Img" src="assets/book-7.jpg">
-                            </figure>
-                            <h2 class="Explore--Title">Cashflow Quadrant</h2>
-                            <div class="Book--Rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star-half-stroke"></i>
-                                </div>
-                                <p class="Explore--Price"><span class="Book--Discount">$176.48</span> $76.48</p>
-                        </div>
-
-                        <div class="Explore--Book">
-                            <figure class="Explore__Img--Mask">
-                                <img class="Explore__Img" src="assets/book-8.jpeg">
-                            </figure>
-                            <h2 class="Explore--Title">Cashflow Quadrant</h2>
-                            <div class="Book--Rating">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star-half-stroke"></i>
-                                </div>
-                                <p class="Explore--Price"><span class="Book--Discount">$176.48</span> $76.48</p>
+                                <p class="Book--Price"><span class="Book--Discount">$75.89</span> $45.89</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section id="About">
-                <div class="About__Div--Container">
-                    <h2 class="About__Header">About Us</h2>
-                    <div class="About--Top">
-                        <h2 class="About--Subtitle">Our Mission</h2>
-                        <p class="About--TopCaption"></p>
+                <section id="Explore">
+                    <div class="Explore__Div--Container">
+                        <h2 class="Explore__Header">Explore Classic <span class="Purple"> Editions</span></h2>
+
+                        <div class="Explore__Book--Wrapper">
+                            <div class="Explore__Book">
+                                
+                                <figure class="Explore__Img--Mask">
+                                    <img class="Explore__Img" src="assets/book-1.jpeg">
+                                </figure>
+
+                                <div class="Explore--Text">
+                                    <h3 class="Explore--BookTitle">The 10x Rule</h3>
+                                    <div class="Explore--Rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                    <p class="Explore--Price"><span class="Book--Discount">$75.89</span> $45.89</p>
+                                </div>
+                                
+                            </div>
+
+                            <div class="Explore__Book">
+                                
+                                <figure class="Explore__Img--Mask">
+                                    <img class="Explore__Img" src="assets/book-2.jpeg">
+                                </figure>
+
+                                <div class="Explore--Text">
+                                    <h3 class="Explore--BookTitle">Be Obsessed Or Be Average</h3>
+                                    <div class="Explore--Rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                    <p class="Explore--Price"><span class="Book--Discount">$75.89</span> $45.89</p>
+                                </div>
+                                
+                            </div>
+
+                            <div class="Explore__Book">
+                                
+                                <figure class="Explore__Img--Mask">
+                                    <img class="Explore__Img" src="assets/book-3.jpeg">
+                                </figure>
+
+                                <div class="Explore--Text">
+                                    <h3 class="Explore--BookTitle">Rich Dad Poor Dad</h3>
+                                    <div class="Explore--Rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                    <p class="Explore--Price"><span class="Book--Discount">$75.89</span> $45.89</p>
+                                </div>
+                                
+                            </div>
+
+                            <div class="Explore__Book">
+                                
+                                <figure class="Explore__Img--Mask">
+                                    <img class="Explore__Img" src="assets/book-4.jpeg">
+                                </figure>
+
+                                <div class="Explore--Text">
+                                    <h3 class="Explore--BookTitle">Cashflow Quadrant</h3>
+                                    <div class="Explore--Rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                    <p class="Explore--Price"><span class="Book--Discount">$75.89</span> $45.89</p>
+                                </div>
+                                
+                            </div>
+
+                            <div class="Explore__Book">
+                                
+                                <figure class="Explore__Img--Mask">
+                                    <img class="Explore__Img" src="assets/book-5.jpeg">
+                                </figure>
+
+                                <div class="Explore--Text">
+                                    <h3 class="Explore--BookTitle">Power</h3>
+                                    <div class="Explore--Rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                    <p class="Explore--Price"><span class="Book--Discount">$75.89</span> $45.89</p>
+                                </div>
+                                
+                            </div>
+
+                            <div class="Explore__Book">
+                                
+                                <figure class="Explore__Img--Mask">
+                                    <img class="Explore__Img" src="assets/book-6.jpeg">
+                                </figure>
+
+                                <div class="Explore--Text">
+                                    <h3 class="Explore--BookTitle">The 5 Second Rule</h3>
+                                    <div class="Explore--Rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                    <p class="Explore--Price"><span class="Book--Discount">$75.89</span> $45.89</p>
+                                </div>
+                                
+                            </div>
+
+                            <div class="Explore__Book">
+                                
+                                <figure class="Explore__Img--Mask">
+                                    <img class="Explore__Img" src="assets/book-7.jpg">
+                                </figure>
+
+                                <div class="Explore--Text">
+                                    <h3 class="Explore--BookTitle">Your Next 5 Moves</h3>
+                                    <div class="Explore--Rating">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star-half-stroke"></i>
+                                    </div>
+                                    <p class="Explore--Price"><span class="Book--Discount">$75.89</span> $45.89</p>
+                                </div>
+                                
+                            </div>
+
+                            <div class="Explore__Book">
+                                
+                                    <figure class="Explore__Img--Mask">
+                                        <img class="Explore__Img" src="assets/book-8.jpeg">
+                                    </figure>
+
+                                    <div class="Explore--Text">
+                                        <h3 class="Explore--BookTitle">Mastery</h3>
+                                        <div class="Explore--Rating">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i>
+                                        </div>
+                                        <p class="Explore--Price"><span class="Book--Discount">$75.89</span> $45.89</p>
+                                    </div>
+                                
+                            </div>
+                        </div>
                     </div>
-                    <div class="About--Bottom">
-                        <h2 class="About--Subtitle">Our </h2>
+                </section>
+
+                <section id="About">
+                    <div class="About__Div--Container">
+                        <h2 class="About__Header">We Apreciate Your Interest!</h2>
+                        <h2 class="About__HeaderTwo">"A moment of someone's time is a precious gift"</h2>
+                        <div class="About__Div--Side">
+
+                            <figure class="About__Img--Mask">
+                                <img class="About__Img" src="assets/undraw_book-lover_m9n3 (1).svg">
+                            </figure>
+
+                            <div class="About--Text">
+                                <h2 class="About__Subheader">About Library</h2>
+                                <h3 class="About--Title">Our History</h3>
+                                <p class="About__Para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis voluptatibus, vitae hic commodi illo harum magni ut rem iusto accusantium culpa velit ea a dignissimos nostrum id aperiam mollitia animi labore odio! Odit sapiente beatae quod quibusdam rerum minima debitis asperiores obcaecati deleniti neque, dignissimos inventore a, quos saepe architecto.</p>
+                                <h3 class="About--Title">Our Mission</h3>
+                                <p class="About__Para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum inventore cum exercitationem. Iusto, suscipit. Et, sed recusandae magni, fugiat nisi fuga laudantium porro cumque modi ex ipsam autem enim? Vel deleniti harum, quisquam animi sit, dolores perspiciatis porro eum facilis aliquid assumenda culpa! Doloremque quia labore repellat sed illum cum.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section id="Contact"></section>
-        </main>
+                <section id="Contact">
+                    <div class="Contact__Div--Container">
+                        <h2 class="Contact__Header">Let's Get in Touch</h2>
+                        <div class="Contact__Div--Side">
+                            <h3 class="Contact--Title"></h3>
+                            <form>
+                                <label>Message<br><input type="textarea"></label>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </main>
 
-        <footer></footer>
-    </body>
-</html>
+            <footer>
+                <div></div>
+            </footer>
+        </body>
+    </html>
