@@ -2,13 +2,18 @@
 /*Universal Styles*/
 /*------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=TASA+Orbiter:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", serif;
+}
+
+Html{
+    scroll-behavior: smooth;
 }
 
 Li{
@@ -31,6 +36,20 @@ Body{
     cursor: not-allowed;
 }
 
+.Container{
+    display: flex;
+    padding: 56px 0;
+}
+
+.Row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 
 /*------------------*/
 /*Home: Nav Styles*/
@@ -47,12 +66,12 @@ Nav{
 }
 .Nav__Div--Container{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
     height: 100%;
     width: 100%;
     max-width: 1200px;
-    justify-content: space-between;
-    margin: 0px 166px;
-    align-items: center;
 }
 
 .Logo{
@@ -61,7 +80,7 @@ Nav{
 
 .Nav__Link{
     margin-left: 20px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     color: #242424;
     transition: all 300ms ease;
@@ -73,7 +92,7 @@ Nav{
 
 .Nav__Link--Primary{
     margin-left: 20px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     padding: 8px;
     border: 3px solid rgb(100, 1, 192);
@@ -88,86 +107,180 @@ Nav{
     color: #fff;
 }
 
+.Btn__Menu{
+    background-color: transparent;
+    font-size: 40px;
+    text-align: center;
+    border: none;
+    display: none;
+}
+
+.Menu__Backdrop{
+    position: absolute;
+    background-color: #242424;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms ease;
+}
+
+.Menu--Open .Menu__Backdrop{
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+}
+
+.Menu--Open{
+    max-height: 100vh;
+    overflow-Y: hidden;
+}
+
+.Btn__Menu--Close{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    padding: 8px;
+    color: #fff;
+}
+
+.Menu__Links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Menu__List{
+    padding: 32px 0px;
+}
+
+.Menu__Link{
+    color: #fff;
+    font-size: 40px;
+}
+
 /*------------------*/
 /*Home: Header Styles*/
 /*------------------*/
 
 #Home{
-    height: 100vh;
     width: 100vw;
     background-color:rgba(100, 1, 192, 0.2);
 }
 
 Header{
-    display: flex;
-    height: 100%;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0px 166px;
+    height: calc(100vh - 80px);
 }
 
 .Home__Div--Container{
     display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.Home__Div--Row{
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Home__Div--Left{
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 50%;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    text-align: center;
+    align-items: center;
 }
 
 .Home--Title{
     font-size: 60px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .Home--Subtitle{
-    margin-top: 30px;
+    margin-bottom: 20px;
+    font-family: "Work Sans",sans-serif;
+    font-weight: 400;
+}
+
+.Btn{
+    padding: 12px;
+    background-color:rgb(100, 1, 192);
+    color: #fff;
+    border-radius: 4px;
+    font-size: 18px;
+    transition: all 300ms ease;
+}
+
+.Btn:active{
+    transform: translateY(1px);
+}
+
+.Btn:hover{
+    cursor: pointer;
+    background-color:rgba(19, 0, 94, 0.889)
+}
+
+.Home__Div--Right{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    justify-content: center;
+    align-items: center; 
 }
 
 .Home__Img--Mask{
     height: 100%;
-    width: 50%;
+    width: 100%;
+    z-index: 2;
 }
 
 .Home__Img{
     height: 100%;
     width: 100%;
 }
-
-.Btn{
-    margin-top: 28px;
-    padding: 10px;
-    border-radius: 4px;
-    font-size: 20px;
-    background-color:rgb(100, 1, 192);
-    color: #fff;
-    transition: all 300ms ease;
-}
-
-.Btn:hover{
-    cursor: pointer;
-    background-color:rgba(100, 1, 192,0.8);
-}
-
-
 /*------------------*/
 /*Highlights Styles*/
 /*------------------*/
 
+
 #Highlights{
     height: 50vh;
     width: 100vw;
+    position: relative;
 }
 
-.Highlight__Div--Container{
-    display: flex;
-    height: 100%;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0px 166px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+#Highlights:before,
+#Highlights:after{
+    background: url("assets/wave.svg");
+    position: absolute;
+    content: "";
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 12vw;
+    width: 100vw;
+    left: 0;
+    z-index: 1;
+}
+
+#Highlights:before{
+    top: 1px;
+    transform: translateY(-100%);
+}
+
+#Highlights:after{
+    bottom: 1px;
+    transform: translateY(100%) rotate(180deg);
 }
 
 .Highlights--Wrapper{
@@ -177,25 +290,26 @@ Header{
 .Highlight{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 30px;
-    
-}
-
-.Highlight--Caption{
-    margin-top: 12px;
+    height: 100%;
+    width: calc(100% / 3);
+    padding: 24px;
 }
 
 .Icon--Decor{
     display: flex;
-    border: 2px solid;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    font-size: 24px;
+    color:rgb(100, 1, 192);
+    border: 2px solid rgb(100, 1, 192,0.4);
     border-radius: 4px;
-    padding: 20px;
-    font-size: 20px;
+    margin-bottom: 8px;
 }
 
 .Highlight--Text{
-    display: flex;
+    display: flex; 
     flex-direction: column;
     text-align: center;
 }
@@ -205,78 +319,66 @@ Header{
 /*------------------*/
 
 #Books{
-    height: 100vh;
+    padding-top: 8vw;
     width: 100vw;
     background-color:rgba(100, 1, 192, 0.2);
 }
 
-.Books__Div--Container{
-    display: flex;
-    height: 100%;
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+.Books__Header{
+    padding-bottom: 16px;
 }
 
-.Books__Wrapper{
+.Books--Wrapper{
     display: flex;
-    height: 100%;
-    width: 100%;
-    max-width: 1200px;
-    max-height: 75vh;
-    margin: 0 auto;
-
 }
 
 .Book{
+    width: 25%;
+    padding: 20px;
+}
+
+
+.Book-Text--Holder{
     display: flex;
-    height: 100%;
-    width: 100%;
-    margin: 0 12px;
     flex-direction: column;
-    align-items: center;
-}
-
-.Books__Header{
-    padding-bottom: 20px;
-}
-
-.Book--Title{
-    text-align: center;
-    padding-top: 4px;
-}
-
-.Book--Rating{
-    display: flex;
-    color: rgb(226, 170, 2);
-}
-
-.Book--Price{
-    text-align: center;
-}
-
-.Book--Discount{
-    text-decoration: line-through;
-    color: rgb(104, 103, 103)
 }
 
 .Book__Img--Mask{
     height: 100%;
-    width: 100%;
-    max-width: 20vw;
+    max-height: 400px;
+    margin-bottom: 8px;
+    border-radius: 2px;
+    overflow: hidden;
 }
 
 .Book__Img--Mask:hover .Book__Img{
-    height: 100%;
-    width: 100%;
+    transform: scale(1.03);
+    cursor: not-allowed;
 }
 
 .Book__Img{
-    padding-top: 12px;
-    height: 99%;
-    width: 99%;
+    height: 100%;
+    width: 100%;
     transition: all 300ms ease;
+}
+
+.Book--Title{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    transition: all 300ms ease;
+}
+
+.Book--Title:hover{
+    text-decoration: underline;
+    cursor: not-allowed;
+}
+
+.Book--Rating{
+    display: flex;
+    margin-bottom: 4px;
+    color: rgb(255, 200, 2);
 }
 
 /*------------------*/
@@ -285,93 +387,294 @@ Header{
 
 
 #Explore{
-    height: 100vh;
+    height: 160vh;
     width: 100vw;
     background-color: #242424;
 }
 
-.Explore__Div--Container{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+.Explore__Header{
+    color: #fff;
+    font-size: 24px;
 }
 
-.Explore__Book--Wrapper{
+.ExploreBooks--Wrapper{
     display: flex;
     flex-wrap: wrap;
-    height: 100%;
-    max-height: 80%;
-    width: 100%;
-    max-width: 1200px;
-    padding-left: 50px;
+}
+
+.ExploreBook{
+    width: 25%;
+    padding: 20px;
     margin-top: 20px;
 }
 
-.Explore__Book{
+
+.Explore-Text--Holder{
     display: flex;
     flex-direction: column;
-    height: 40%;
-    width: 20%;
-    margin-left: 30px;
-    margin-top: 20px;
-    align-items: center;
 }
 
 .Explore__Img--Mask{
     height: 100%;
-    width: 100%;
-}
-
-.Explore__Img{
-    height: 99%;
-    width: 99%;
-    transition: all 300ms ease;
+    max-height: 380px;
+    margin-bottom: 8px;
+    border-radius: 2px;
+    overflow: hidden;
 }
 
 .Explore__Img--Mask:hover .Explore__Img{
+    transform: scale(1.03);
+}
+
+.Explore__Img{
     height: 100%;
     width: 100%;
+    transition: all 300ms ease;
 }
 
+.Purple-Explore{
+    color:rgb(132, 4, 251);
+    font-size: 24px;
+}
 
-
-.Explore__Header{
+.Explore-Book--Title{
     color: #fff;
-}
-
-.Explore--Text{
-    display: flex;
-    height: 100%;
-    max-height: 20%;
-    width: 100%;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    margin-top: 8px;
-}
-
-.Explore--BookTitle{
-    color: #fff;
-    padding-bottom: 4px;
-    font-size: 16px;
-    padding-top: 4px;
 }
 
 .Explore--Rating{
     display: flex;
-    color: rgb(226, 170, 2);
-    font-size: 10px;
-    margin-left: 84px;
-    text-align: center;
+    color: rgb(255, 200, 2);
 }
 
 .Explore--Price{
     color: #fff;
-    font-size: 12px;
-    padding-bottom: 12px;
+}
+
+.Book--Discount{
+    color: #717070;
+    text-decoration: line-through;
+}
+
+/*------------------*/
+/*About Styles*/
+/*------------------*/
+
+#About{
+    height: 100vh;
+    width: 100vw;
+    background-color:rgba(100, 1, 192, 0.2);
+}
+
+.About__Div--Container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+    padding: 56px 0;
+    margin: 0 auto;
+}
+
+.About__Header{
+    font-size: 40px;
+    font-family: "Work Sans", sans-serif;
+    text-align: center;
+    font-weight: 800;
+
+}
+
+
+.About__HeaderTwo{
+    padding-top: 30px;
+    font-size: 24px;
+    color:rgb(0, 0, 0);
+}
+
+.About--Text{
+    padding-top: 12px;
+    text-align: center;
+    font-size: 18px;
+    color:rgb(0, 0, 0,0.8);
+    line-height: 28px;
+}
+
+.About__Div--Inner{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 56px;
+}
+
+
+.About--Final{
+    padding-top: 24px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+}
+
+.About__Left{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    align-items: center;
+}
+
+.About__Right{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    z-index: 2;
+}
+
+.About__Img--Mask{
+    height: 100%;
+    width: 100%;
+}
+
+.About__Img{
+    height: 100%;
+    width: 100%;
+}
+
+
+/*------------------*/
+/*Contact Styles*/
+/*------------------*/
+
+#Contact{
+    height: calc(100vh - 240px);
+    width: 100vw;
+    position: relative;
+}
+
+#Contact:before{
+    background: url("assets/wave.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    content: "";
+    height: 12vw;
+    width: 100vw;
+    top: 1px;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-100%);
+}
+
+.Contact__Div--Row{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 56px;
+}
+
+.Contact__Header{
+    font-size: 26px;
+    padding-bottom: 16px;
+}
+
+.Contact__Div--Inner{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-around;
+    z-index: 2;
+}
+
+
+
+/*------------------*/
+/*Contact__Left Style*/
+/*------------------*/
+
+.Contact__Left{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 80%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 56px;
+}
+
+.Contact__Header--Inner{
+    font-size: 22px;
+}
+
+.Contact__Header--Small{
+    font-size: 18px;
+    padding-top: 12px;
+}
+
+.Contact--Text{
+    font-size: 16px;
+}
+
+.Contact--Social{
+    display: flex;
+}
+
+.Social{
+    margin-left: 8px;
+    padding-top: 4px;
+}
+
+
+/*--------------------*/
+/*Contact__Right Style*/
+/*--------------------*/
+
+.Contact__Right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+.Contact__Header{
+    z-index: 2;
+}
+
+.Contact__Form{
+    z-index: 2;
+    padding: 32px 0;
+    width: 100%;
+    font-size: 16px;
+    height: 100%;
+}
+
+input[type=text]{
+    width: 100%;
+    padding: 8px;
+    margin: 4px 0;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+input[type=email]{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+textarea{
+    width: 100%;
+    max-height: 100%;
+    padding: 8px;
+    border-radius: 4px;
 }
 
 /*------------------*/
@@ -385,6 +688,8 @@ Header{
     width: 100vw;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
+    background-color:rgb(54, 53, 53);
 }
 
 .Footer__List{
@@ -392,13 +697,220 @@ Header{
 }
 
 .Footer__Link{
-    padding-left: 12px;
+    margin-left: 24px;
+    font-size: 18px;
+    color: #fff;
+    transition: all 300ms ease;
+}
+
+
+.Footer__Link:hover{
+    text-decoration: underline;
+}
+
+.Footer__Logo--Mask{
+    display: flex;
 }
 
 .Footer__Logo{
-    max-width: 180px;
+    max-width: 160px;
+    margin-bottom: 20px;
+    filter: grayscale(1) invert();
+}
+
+.Footer__Copyright{
+    color: #fff;
+    margin-top: 16px;
 }
 
 /*------------------*/
-/*Media Queries Styles*/
+/*Media Query Styles*/
 /*------------------*/
+
+
+@Media (max-width: 1230px){
+    .Home__Div--Row{
+        flex-direction: column;
+        max-width: 900px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Home--Title{
+        font-size: 40px;
+    }
+
+    .Home--Subtitle{
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+
+    .Btn{
+        font-size: 16px;
+        padding: 6px 8px;
+    }
+
+    .Nav__Div--Container{
+        max-width: 900px;
+    }
+
+    .Book__Img--Mask{
+        max-height: 380px;
+    }
+
+    .Explore__Img--Mask{
+        max-width: 240px;
+    }
+
+    .About__Right{
+        padding: 0 40px;
+    }
+
+    .Contact__Div--Row{
+        max-width: 1000px;
+    }
+}
+
+@Media (max-width: 800px){
+
+    .Row{
+        max-width: 900px;
+    }
+
+    .Home__Div--Row{
+        max-width: 720px;
+    }
+
+    .Home__Div--Container{
+        padding-top: 10px;
+        justify-content: center;
+    }
+
+    .Home__Div--Left{
+        width: 80%;
+        height: 30%;
+    }
+
+    .Home__Div--Right{
+        height: 50%;
+        align-items: center;
+    }
+
+    .Home--Title{
+        font-size: 30px;
+    }
+
+    .Nav__Div--Container{
+        max-width: 720px;
+    }
+
+    .Home__Img--Mask{
+        max-height: 600px;
+    }
+
+    .Home__Img{
+        height: 100%;
+    }
+
+    .Highlight__Subcaption{
+        font-size: 16px;
+    }
+
+    .Book__Img--Mask{
+        max-height: 260px;
+    }
+
+
+    .Book--Title{
+        font-size: 14px;
+    }
+    
+    .Book--Rating{
+        font-size: 12px;
+    }
+
+    .Book--Price{
+        font-size: 12px;
+    }
+
+    .Explore__Img--Mask{
+        max-height: 260px;
+    }
+
+    .Explore-Book--Title{
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    
+    #Explore{
+        height: 120vh;
+    }
+    .Explore--Rating{
+        font-size: 12px;
+        margin-bottom: 6px;
+    }
+
+    .Explore--Price{
+        font-size: 12px;
+    }
+
+    .About__Header{
+        font-size: 24px;
+    }
+
+    .About__Div--Inner{
+        padding-top: 56px;
+    }
+
+    .About__HeaderTwo{
+        font-size: 14px;
+    }
+
+    .About__Left{
+        width: 60%;
+    }
+
+    .About__Right{
+        width: 70%;
+    }
+
+    .About--Text{
+        font-size: 12px;
+    }
+    
+
+    .About--Final{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .Contact__Div--Row{
+        max-width: 720px;
+    }
+
+    .Contact__Div--Inner{
+        width: 100%;
+    }
+
+    .Contact__Div--Left{
+        width: 50%;
+    }
+
+    .Contact__Right{
+        width: 50%;
+    }
+}
+
+
+/*Media Query Styles*/
+/*------------------*/
+@Media (max-width: 550px){
+    .Nav__List{
+        display: none;
+    }
+
+    .Btn__Menu{
+        display: block;
+    }
+}
