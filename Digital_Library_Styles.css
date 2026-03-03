@@ -772,14 +772,30 @@ textarea{
     }
 }
 
-@Media (max-width: 800px){
+@Media (max-width: 768px){
 
     .Row{
-        max-width: 900px;
+        max-width: 640px;
+    }
+
+    .Nav__Div--Container{
+        max-width: 640px;
+    }
+
+    .Nav__Link{
+        font-size: 16px;
+    }
+
+    .Nav__Link--Primary{
+        font-size: 16px;
+    }
+
+    .Logo{
+        max-width: 140px;
     }
 
     .Home__Div--Row{
-        max-width: 720px;
+        max-width: 640px;
     }
 
     .Home__Div--Container{
@@ -801,10 +817,6 @@ textarea{
         font-size: 30px;
     }
 
-    .Nav__Div--Container{
-        max-width: 720px;
-    }
-
     .Home__Img--Mask{
         max-height: 600px;
     }
@@ -813,8 +825,18 @@ textarea{
         height: 100%;
     }
 
-    .Highlight__Subcaption{
-        font-size: 16px;
+    .Highlight--Subcaption{
+        font-size: 14px;
+        line-height: 20px;
+        color:rgba(0, 0, 0, 0.751)
+    }
+
+    .Book--Wrapper{
+        padding-right: 20px
+    }
+
+    .Book{
+        padding: 0px 8px; 
     }
 
     .Book__Img--Mask{
@@ -834,8 +856,16 @@ textarea{
         font-size: 12px;
     }
 
+    #Explore{
+        height: 110vh;
+    }
+
+    .ExploreBook{
+        padding: 12px
+    }
+
     .Explore__Img--Mask{
-        max-height: 260px;
+        max-height: 220px;
     }
 
     .Explore-Book--Title{
@@ -843,9 +873,6 @@ textarea{
         margin-bottom: 6px;
     }
     
-    #Explore{
-        height: 120vh;
-    }
     .Explore--Rating{
         font-size: 12px;
         margin-bottom: 6px;
@@ -856,12 +883,9 @@ textarea{
     }
 
     .About__Header{
-        font-size: 24px;
+        font-size: 22px;
     }
 
-    .About__Div--Inner{
-        padding-top: 56px;
-    }
 
     .About__HeaderTwo{
         font-size: 14px;
@@ -886,7 +910,7 @@ textarea{
     }
 
     .Contact__Div--Row{
-        max-width: 720px;
+        max-width: 640px;
     }
 
     .Contact__Div--Inner{
@@ -900,11 +924,13 @@ textarea{
     .Contact__Right{
         width: 50%;
     }
+
+    .Contact__Form{
+        font-size: 14px;
+    }
 }
 
 
-/*Media Query Styles*/
-/*------------------*/
 @Media (max-width: 550px){
     .Nav__List{
         display: none;
@@ -914,3 +940,4 @@ textarea{
         display: block;
     }
 }
+
