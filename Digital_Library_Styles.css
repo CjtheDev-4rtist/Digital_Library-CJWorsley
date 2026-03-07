@@ -24,8 +24,8 @@ A{
     text-decoration: none;
 }
 
-Body{
-    overflow-x: hidden;
+Section{
+    overflow: hidden;
 }
 
 .Purple{
@@ -38,11 +38,25 @@ Body{
 
 .Container{
     display: flex;
+    height: 100%;
+    width: 100%;
     padding: 56px 0;
 }
 
 .Row{
     display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Row__Column{
+    display: flex;
+    height: 100%;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -76,6 +90,7 @@ Nav{
 
 .Logo{
     max-width: 180px;
+    margin-top: 12px;
 }
 
 .Nav__Link{
@@ -94,7 +109,7 @@ Nav{
     margin-left: 20px;
     font-size: 20px;
     font-weight: bold;
-    padding: 8px;
+    padding: 8px 24px;
     border: 3px solid rgb(100, 1, 192);
     color: #242424;
     border-radius: 4px;
@@ -170,26 +185,9 @@ Nav{
 /*------------------*/
 
 #Home{
+    height: 100vh;
     width: 100vw;
-    background-color:rgba(100, 1, 192, 0.2);
-}
-
-Header{
-    height: calc(100vh - 80px);
-}
-
-.Home__Div--Container{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-}
-
-.Home__Div--Row{
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    background-color:rgb(232, 208, 255);
 }
 
 .Home__Div--Left{
@@ -198,22 +196,23 @@ Header{
     height: 100%;
     width: 50%;
     justify-content: center;
-    align-items: center;
 }
 
-.Home--Title{
-    font-size: 60px;
+.Home__Header{
+    font-size: 55px;
     text-align: center;
     margin-bottom: 20px;
+    text-align: left;
 }
 
-.Home--Subtitle{
+.Home__Subheader{
     margin-bottom: 20px;
+    font-size: 24px;
     font-family: "Work Sans",sans-serif;
     font-weight: 400;
 }
 
-.Btn{
+.Home__Btn{
     padding: 12px;
     background-color:rgb(100, 1, 192);
     color: #fff;
@@ -222,13 +221,13 @@ Header{
     transition: all 300ms ease;
 }
 
-.Btn:active{
-    transform: translateY(1px);
+.Home__Btn:active{
+    transform: translateY(2px);
 }
 
-.Btn:hover{
+.Home__Btn:hover{
     cursor: pointer;
-    background-color:rgba(19, 0, 94, 0.889)
+    background-color: rgb(75, 1, 144)
 }
 
 .Home__Div--Right{
@@ -242,7 +241,6 @@ Header{
 .Home__Img--Mask{
     height: 100%;
     width: 100%;
-    z-index: 2;
 }
 
 .Home__Img{
@@ -253,9 +251,8 @@ Header{
 /*Highlights Styles*/
 /*------------------*/
 
-
 #Highlights{
-    height: 50vh;
+    height: 60vh;
     width: 100vw;
     position: relative;
 }
@@ -263,12 +260,10 @@ Header{
 #Highlights:before,
 #Highlights:after{
     background: url("assets/wave.svg");
-    position: absolute;
     content: "";
-    background-size: cover;
-    background-repeat: no-repeat;
+    position: absolute;
     height: 12vw;
-    width: 100vw;
+    width: 101vw;
     left: 0;
     z-index: 1;
 }
@@ -283,257 +278,261 @@ Header{
     transform: translateY(100%) rotate(180deg);
 }
 
-.Highlights--Wrapper{
+.Highlight--Top{
     display: flex;
+    height: 20%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Highlight--Title{
+    letter-spacing: 2px;
+    font-size: 14px;
+    color:rgb(100, 1, 192);
+    font-weight: 700;
+}
+
+.Highlights__Header{
+    font-size: 24px;
+    margin: 4px 0 2px 0;
+}
+
+.Highlights__Subheader{
+    color: #656464;
+}
+
+.Highlight--Wrapper{
+    display: flex;
+    height: 80%;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .Highlight{
     display: flex;
-    flex-direction: column;
     height: 100%;
     width: calc(100% / 3);
-    padding: 24px;
-}
-
-.Icon--Decor{
-    display: flex;
-    margin: 0 auto;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 24px;
-    font-size: 24px;
+    padding: 0 24px;
+}
+
+.Icon-Decor{
+    display: flex;
+    font-size: 22px;
     color:rgb(100, 1, 192);
-    border: 2px solid rgb(100, 1, 192,0.4);
+    border: 2px solid rgba(79, 2, 146, 0.441);
     border-radius: 4px;
-    margin-bottom: 8px;
+    padding: 16px;
 }
 
 .Highlight--Text{
-    display: flex; 
+    display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.H-Reason{
+    font-size: 18px;
+    margin: 12px;
+}
+
+.H-Caption{
+    font-size: 16px;
+    max-width: 90%;
     text-align: center;
+    line-height: 24px;
 }
 
-/*------------------*/
-/*Books Styles*/
-/*------------------*/
+/*Featured*/
 
-#Books{
-    padding-top: 8vw;
+#Featured{
+    height: 100vh;
     width: 100vw;
-    background-color:rgba(100, 1, 192, 0.2);
+    background-color:rgb(232, 208, 255);
 }
 
+.Featured--Top{
+    display: flex;
+    height: 20%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
 
-.Books__Header{
-    padding-bottom: 16px;
+.Featured--Title{
+    letter-spacing: 2px;
+    font-weight: 700;
+    color:rgb(100, 1, 192);
+}
+
+.Featured__Header{
+    font-size: 24px;
+}
+
+.Featured__Subheader{
+    color:rgb(105, 113, 130);
 }
 
 .Books--Wrapper{
     display: flex;
+    height: 80%;
+    width: 100%;
 }
 
 .Book{
-    width: 25%;
-    padding: 20px;
-}
-
-
-.Book-Text--Holder{
     display: flex;
     flex-direction: column;
-}
-
-.Book__Img--Mask{
     height: 100%;
-    max-height: 400px;
-    margin-bottom: 8px;
-    border-radius: 2px;
-    overflow: hidden;
-}
-
-.Book__Img--Mask:hover .Book__Img{
-    transform: scale(1.03);
-    cursor: not-allowed;
-}
-
-.Book__Img{
-    height: 100%;
-    width: 100%;
-    transition: all 300ms ease;
+    width: calc(100% / 4);
+    padding: 0 18px;
 }
 
 .Book--Title{
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 4px;
-    transition: all 300ms ease;
+    font-size: 18px;
+    margin-top: 12px;
+    transition: all 2s ease-in-out;
 }
 
 .Book--Title:hover{
     text-decoration: underline;
-    cursor: not-allowed;
 }
 
 .Book--Rating{
-    display: flex;
-    margin-bottom: 4px;
-    color: rgb(255, 200, 2);
+    margin: 2px 0px;
+    color: rgb(239, 184, 88)
 }
 
-/*------------------*/
-/*Explore Styles*/
-/*------------------*/
-
-
-#Explore{
-    height: 160vh;
-    width: 100vw;
-    background-color: #242424;
+.Book--Discount{
+    text-decoration: line-through;
+    color: rgb(114, 114, 114);
+    margin-right: 2px;
 }
 
-.Explore__Header{
-    color: #fff;
-    font-size: 24px;
-}
-
-.ExploreBooks--Wrapper{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.ExploreBook{
-    width: 25%;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-
-.Explore-Text--Holder{
-    display: flex;
-    flex-direction: column;
-}
-
-.Explore__Img--Mask{
+.Books__Img--Mask{
     height: 100%;
-    max-height: 380px;
-    margin-bottom: 8px;
-    border-radius: 2px;
-    overflow: hidden;
+    width:100%;
+    overflow: hidden
 }
 
-.Explore__Img--Mask:hover .Explore__Img{
+.Books__Img--Mask:hover .Books__Img{
     transform: scale(1.03);
 }
 
-.Explore__Img{
+.Books__Img{
     height: 100%;
     width: 100%;
     transition: all 300ms ease;
 }
 
-.Purple-Explore{
-    color:rgb(132, 4, 251);
-    font-size: 24px;
+
+/*Explore*/
+
+#Explore{
+    height: 140vh;
+    width: 100vw;
+    background-color: #242424;
 }
 
-.Explore-Book--Title{
+.Explore--Top{
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+    width: 100%;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.Explore--Title{
+    font-size: 14px;
+    color:rgb(100, 1, 192);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.Explore__Header{
+    margin: 4px 0;
+    color: #fff;
+}
+
+.Explore__Subheader{
+    color:rgb(114, 114, 114);
+}
+
+.Explore--Wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    height: 90%;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    padding-top: 28px;
+}
+
+.Exp--Book{
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 4);
+    align-items: center;
+}
+
+.Explore--Text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Exp__Img--Mask{
+    height: 70%;
+    width: 75%;
+}
+
+.Exp__Img--Mask:hover .Exp__Img{
+    transform: scale(1.03)
+}
+
+.Exp__Img{
+    height: 100%;
+    width: 100%;
+    transition: all 300ms ease;
+}
+
+.Exp--Book-Title{
+    margin-top: 12px;
     color: #fff;
 }
 
 .Explore--Rating{
-    display: flex;
-    color: rgb(255, 200, 2);
+    margin: 2px 0px;
+    color: rgb(239, 184, 88);
+    font-size: 12px;
 }
 
-.Explore--Price{
+.Exp--Book-Price{
+    font-size: 14px;
     color: #fff;
 }
 
-.Book--Discount{
-    color: #717070;
-    text-decoration: line-through;
-}
-
-/*------------------*/
 /*About Styles*/
-/*------------------*/
 
 #About{
     height: 100vh;
     width: 100vw;
-    background-color:rgba(100, 1, 192, 0.2);
+    background-color:rgb(232, 208, 255);
 }
 
-.About__Div--Container{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    max-width: 1200px;
+.About--Left{
+    display:flex;
     align-items: center;
     justify-content: center;
-    padding: 56px 0;
-    margin: 0 auto;
-}
-
-.About__Header{
-    font-size: 40px;
-    font-family: "Work Sans", sans-serif;
-    text-align: center;
-    font-weight: 800;
-
-}
-
-
-.About__HeaderTwo{
-    padding-top: 30px;
-    font-size: 24px;
-    color:rgb(0, 0, 0);
-}
-
-.About--Text{
-    padding-top: 12px;
-    text-align: center;
-    font-size: 18px;
-    color:rgb(0, 0, 0,0.8);
-    line-height: 28px;
-}
-
-.About__Div--Inner{
-    display: flex;
-    height: 100%;
-    width: 100%;
-    padding-bottom: 56px;
-}
-
-
-.About--Final{
-    padding-top: 24px;
-    font-family: "Work Sans", sans-serif;
-    font-weight: 700;
-}
-
-.About__Left{
-    display: flex;
     height: 100%;
     width: 50%;
-    align-items: center;
-}
-
-.About__Right{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 50%;
-    align-items: center;
-    justify-content: center;
-    padding: 0 16px;
-    z-index: 2;
 }
 
 .About__Img--Mask{
-    height: 100%;
+    height:100%;
     width: 100%;
 }
 
@@ -542,154 +541,137 @@ Header{
     width: 100%;
 }
 
+.About--Right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+}
 
-/*------------------*/
+.About--Title{
+    font-size: 14px;
+    font-weight: 700;
+    color:rgb(100, 1, 192);
+    letter-spacing: 2px;
+}
+
+.About--Text{
+    line-height: 24px;
+}
+
+.About__Header{
+    font-size: 40px;
+    font-weight: 700;
+    margin: 12px 0px;
+}
+
+.About__Subheader{
+    font-size: 18px;
+    text-align: left;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.About--Header{
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 32px;
+}
+
 /*Contact Styles*/
-/*------------------*/
 
 #Contact{
-    height: calc(100vh - 240px);
+    height: 60vh;
     width: 100vw;
-    position: relative;
 }
 
-#Contact:before{
-    background: url("assets/wave.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    content: "";
-    height: 12vw;
-    width: 100vw;
-    top: 1px;
-    left: 0;
-    z-index: 1;
-    transform: translateY(-100%);
-}
-
-.Contact__Div--Row{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    max-width: 1200px;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    padding-top: 56px;
+.Contact--Title{
+    font-size: 14px;
+    color:rgb(100, 1, 192);
+    letter-spacing: 2px;
+    font-weight: 700;
 }
 
 .Contact__Header{
-    font-size: 26px;
-    padding-bottom: 16px;
+    font-size: 24px;
 }
 
-.Contact__Div--Inner{
-    display: flex;
-    height: 100%;
-    width: 100%;
-    justify-content: space-around;
-    z-index: 2;
+.Contact__Subheader{
+    margin-bottom: 24px;
 }
 
+.Contact--Msg{
+    font-size: 24px;
+    margin: 16px 0;
+}
 
+.Contact--Header{
+    font-size: 20px;
+    margin-top: 8px;
+}
 
-/*------------------*/
-/*Contact__Left Style*/
-/*------------------*/
+.Contact--Info{
+    margin-top: 4px;
+}
 
-.Contact__Left{
+.Contact--Inner{
     display: flex;
-    flex-direction: column;
-    width: 50%;
     height: 80%;
+    width: 100%;
     align-items: center;
     justify-content: center;
-    padding-top: 56px;
 }
 
-.Contact__Header--Inner{
-    font-size: 22px;
-}
-
-.Contact__Header--Small{
-    font-size: 18px;
-    padding-top: 12px;
-}
-
-.Contact--Text{
-    font-size: 16px;
-}
-
-.Contact--Social{
+.Contact--Left{
     display: flex;
-}
-
-.Social{
-    margin-left: 8px;
-    padding-top: 4px;
-}
-
-
-/*--------------------*/
-/*Contact__Right Style*/
-/*--------------------*/
-
-.Contact__Right{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
+    flex-direction: column;
     height: 100%;
+    width: 50%;
+    align-items: center;
+    padding: 18px 27px;
 }
 
-.Contact__Header{
-    z-index: 2;
+.Contact--Right{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
 }
 
 .Contact__Form{
-    z-index: 2;
-    padding: 32px 0;
-    width: 100%;
-    font-size: 16px;
-    height: 100%;
-}
-
-input[type=text]{
-    width: 100%;
-    padding: 8px;
-    margin: 4px 0;
-    border: 1px solid;
-    border-radius: 4px;
-}
-
-input[type=email]{
-    width: 100%;
-    padding: 8px;
-    border: 1px solid;
-    border-radius: 4px;
-}
-
-textarea{
-    width: 100%;
-    max-height: 100%;
-    padding: 8px;
-    border-radius: 4px;
-}
-
-/*------------------*/
-/*Footer Styles*/
-/*------------------*/
-
-.Footer__Div--Container{
     display: flex;
     flex-direction: column;
-    height: 240px;
+    width: 100%;
+    margin-left: 48px;
+}
+
+input[type="text"]{
+    width: 100%;
+    padding: 8px 8px;
+    max-width: 85%;
+}
+
+input[type="email"]{
+    width: 100%;
+    padding: 8px 8px;
+    max-width: 85%;
+}
+
+.Social--Flex{
+    display: flex;
+    margin-top: 4px;
+}
+
+/*Footer Styles*/
+
+Footer{
+    height: 40vh;
     width: 100vw;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    background-color:rgb(54, 53, 53);
+    background-color: #242424;
 }
 
 .Footer__List{
@@ -697,247 +679,12 @@ textarea{
 }
 
 .Footer__Link{
-    margin-left: 24px;
-    font-size: 18px;
     color: #fff;
-    transition: all 300ms ease;
-}
-
-
-.Footer__Link:hover{
-    text-decoration: underline;
-}
-
-.Footer__Logo--Mask{
-    display: flex;
+    font-size: 18px;
+    margin-left: 30px;
 }
 
 .Footer__Logo{
-    max-width: 160px;
-    margin-bottom: 20px;
-    filter: grayscale(1) invert();
+    max-width: 200px;
+    margin-bottom: 16px;
 }
-
-.Footer__Copyright{
-    color: #fff;
-    margin-top: 16px;
-}
-
-/*------------------*/
-/*Media Query Styles*/
-/*------------------*/
-
-
-@Media (max-width: 1230px){
-    .Home__Div--Row{
-        flex-direction: column;
-        max-width: 900px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .Home--Title{
-        font-size: 40px;
-    }
-
-    .Home--Subtitle{
-        font-size: 20px;
-        text-align: center;
-        margin-bottom: 12px;
-    }
-
-    .Btn{
-        font-size: 16px;
-        padding: 6px 8px;
-    }
-
-    .Nav__Div--Container{
-        max-width: 900px;
-    }
-
-    .Book__Img--Mask{
-        max-height: 380px;
-    }
-
-    .Explore__Img--Mask{
-        max-width: 240px;
-    }
-
-    .About__Right{
-        padding: 0 40px;
-    }
-
-    .Contact__Div--Row{
-        max-width: 1000px;
-    }
-}
-
-@Media (max-width: 768px){
-
-    .Row{
-        max-width: 640px;
-    }
-
-    .Nav__Div--Container{
-        max-width: 640px;
-    }
-
-    .Nav__Link{
-        font-size: 16px;
-    }
-
-    .Nav__Link--Primary{
-        font-size: 16px;
-    }
-
-    .Logo{
-        max-width: 140px;
-    }
-
-    .Home__Div--Row{
-        max-width: 640px;
-    }
-
-    .Home__Div--Container{
-        padding-top: 10px;
-        justify-content: center;
-    }
-
-    .Home__Div--Left{
-        width: 80%;
-        height: 30%;
-    }
-
-    .Home__Div--Right{
-        height: 50%;
-        align-items: center;
-    }
-
-    .Home--Title{
-        font-size: 30px;
-    }
-
-    .Home__Img--Mask{
-        max-height: 600px;
-    }
-
-    .Home__Img{
-        height: 100%;
-    }
-
-    .Highlight--Subcaption{
-        font-size: 14px;
-        line-height: 20px;
-        color:rgba(0, 0, 0, 0.751)
-    }
-
-    .Book--Wrapper{
-        padding-right: 20px
-    }
-
-    .Book{
-        padding: 0px 8px; 
-    }
-
-    .Book__Img--Mask{
-        max-height: 260px;
-    }
-
-
-    .Book--Title{
-        font-size: 14px;
-    }
-    
-    .Book--Rating{
-        font-size: 12px;
-    }
-
-    .Book--Price{
-        font-size: 12px;
-    }
-
-    #Explore{
-        height: 110vh;
-    }
-
-    .ExploreBook{
-        padding: 12px
-    }
-
-    .Explore__Img--Mask{
-        max-height: 220px;
-    }
-
-    .Explore-Book--Title{
-        font-size: 14px;
-        margin-bottom: 6px;
-    }
-    
-    .Explore--Rating{
-        font-size: 12px;
-        margin-bottom: 6px;
-    }
-
-    .Explore--Price{
-        font-size: 12px;
-    }
-
-    .About__Header{
-        font-size: 22px;
-    }
-
-
-    .About__HeaderTwo{
-        font-size: 14px;
-    }
-
-    .About__Left{
-        width: 60%;
-    }
-
-    .About__Right{
-        width: 70%;
-    }
-
-    .About--Text{
-        font-size: 12px;
-    }
-    
-
-    .About--Final{
-        font-size: 20px;
-        text-align: center;
-    }
-
-    .Contact__Div--Row{
-        max-width: 640px;
-    }
-
-    .Contact__Div--Inner{
-        width: 100%;
-    }
-
-    .Contact__Div--Left{
-        width: 50%;
-    }
-
-    .Contact__Right{
-        width: 50%;
-    }
-
-    .Contact__Form{
-        font-size: 14px;
-    }
-}
-
-
-@Media (max-width: 550px){
-    .Nav__List{
-        display: none;
-    }
-
-    .Btn__Menu{
-        display: block;
-    }
-}
-
